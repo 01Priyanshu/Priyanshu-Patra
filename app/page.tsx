@@ -440,9 +440,9 @@ export default function Home() {
                       animate={{ opacity: 1, scale: 1, rotateY: 0 }}
                       transition={{ duration: 0.8, delay: 0.4, type: "spring" }}
                     >
-                      <div className="relative">
+                      <div className="relative w-[500px] h-[500px] flex items-center justify-center">
                         {/* Orbiting particles container */}
-                        <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="absolute inset-0 flex items-center justify-center overflow-visible">
                           {/* Outer orbit ring */}
                           <motion.div
                             className="absolute w-[500px] h-[500px] rounded-full border border-primary/20 border-dashed"
@@ -564,18 +564,20 @@ export default function Home() {
                           ))}
                         </div>
 
-                        <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-primary via-accent to-secondary opacity-30 blur-lg animate-pulse-slow"></div>
-                        <Image
-                          src={"/images/profile.jpg"}
-                          width={400}
-                          height={400}
-                          alt="Profile"
-                          className="rounded-xl shadow-lg shadow-primary/20 border border-primary/10 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 hover:scale-105 relative z-10"
-                        />
+                        <div className="relative z-10">
+                          <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-primary via-accent to-secondary opacity-30 blur-lg animate-pulse-slow"></div>
+                          <Image
+                            src={"/images/profile.jpg"}
+                            width={280}
+                            height={280}
+                            alt="Profile"
+                            className="rounded-full shadow-lg shadow-primary/20 border-4 border-background hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 relative z-10"
+                          />
+                        </div>
                         <motion.div
-                          className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center"
+                          className="absolute bottom-[80px] right-[60px] w-20 h-20 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center z-20 border border-primary/30"
                           animate={{
-                            scale: [1, 1.2, 1],
+                            scale: [1, 1.15, 1],
                             rotate: [0, 10, 0],
                           }}
                           transition={{
@@ -584,14 +586,14 @@ export default function Home() {
                             repeatType: "reverse",
                           }}
                         >
-                          <span className="text-primary font-bold">
+                          <span className="text-primary font-bold text-xs text-center">
                             Data
                             <br />
                             Science
                           </span>
                         </motion.div>
                         <motion.div
-                          className="absolute -top-4 -left-4 w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center"
+                          className="absolute top-[80px] left-[60px] w-16 h-16 bg-accent/20 backdrop-blur-sm rounded-full flex items-center justify-center z-20 border border-accent/30"
                           animate={{
                             scale: [1, 1.1, 1],
                             rotate: [0, -5, 0],
@@ -603,7 +605,7 @@ export default function Home() {
                             delay: 1,
                           }}
                         >
-                          <span className="text-accent font-bold">ML</span>
+                          <span className="text-accent font-bold text-xs">ML</span>
                         </motion.div>
                       </div>
                     </motion.div>
