@@ -601,25 +601,68 @@ portfolio()`}
                         </motion.h3>
                         <ul className="space-y-4">
                           <motion.li
-                            className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light transition-all duration-300 hover:translate-x-2 animated-border cursor-hover"
+                            className="flex flex-col gap-2 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light transition-all duration-300 hover:translate-x-2 animated-border cursor-hover"
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
                             whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(255, 59, 48, 0.2)" }}
                           >
-                            <div className="font-semibold">
-                              Bachelor of Technology (B.Tech) in Computer Science and Engineering
+                            <div className="flex items-center gap-3">
+                              <Image
+                                src="/images/asu-logo.png"
+                                alt="Arizona State University"
+                                width={50}
+                                height={50}
+                                className="rounded-md bg-white p-1"
+                              />
+                              <div>
+                                <div className="font-semibold">
+                                  Master of Science in Data Science, Analytics and Engineering
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  Arizona State University, Tempe, USA • Aug 2024 - Present
+                                </div>
+                                <p className="text-sm text-muted-foreground">GPA: 3.89/4.0</p>
+                              </div>
                             </div>
-                            <div className="text-sm text-muted-foreground">
-                              SRM Institute of Science and Technology, Chennai • Sep 2020 - May 2024
+                            <div className="text-xs text-muted-foreground mt-1">
+                              <span className="font-medium text-primary">Relevant Coursework:</span> DSE 501 – Statistics for Data Analysts, CSE 511 – Data Processing at Scale, CSE 543 – Information Assurance and Security, CSE 578 – Data Visualization, CSE 575 – Statistical Machine Learning, CSE 572 – Data Mining
                             </div>
-                            <p className="text-sm text-muted-foreground">CGPA: 8.9/10</p>
+                          </motion.li>
+                          <motion.li
+                            className="flex flex-col gap-2 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light transition-all duration-300 hover:translate-x-2 animated-border cursor-hover"
+                            initial={{ opacity: 0, x: -50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(255, 59, 48, 0.2)" }}
+                          >
+                            <div className="flex items-center gap-3">
+                              <Image
+                                src="/images/srm-logo.png"
+                                alt="SRM Institute of Science and Technology"
+                                width={50}
+                                height={50}
+                                className="rounded-md bg-white p-1"
+                              />
+                              <div>
+                                <div className="font-semibold">
+                                  Bachelor of Technology (B.Tech) in Computer Science and Engineering
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  SRM Institute of Science and Technology, Chennai • Sep 2020 - May 2024
+                                </div>
+                                <p className="text-sm text-muted-foreground">CGPA: 8.9/10</p>
+                              </div>
+                            </div>
+                            <div className="text-xs text-muted-foreground mt-1">
+                              <span className="font-medium text-primary">Relevant Coursework:</span> Data Structures and Algorithms, Database Management Systems (DBMS), Object-Oriented Programming (OOP), Computer Networks, Artificial Intelligence & Machine Learning, Web Development
+                            </div>
                           </motion.li>
                           <motion.li
                             className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light transition-all duration-300 hover:translate-x-2 animated-border cursor-hover"
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
+                            transition={{ duration: 0.5, delay: 0.3 }}
                             whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(255, 59, 48, 0.2)" }}
                           >
                             <div className="font-semibold">CBSE 12th Board (Physics, Chemistry, Mathematics)</div>
@@ -631,7 +674,7 @@ portfolio()`}
                             className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light transition-all duration-300 hover:translate-x-2 animated-border cursor-hover"
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5, delay: 0.3 }}
+                            transition={{ duration: 0.5, delay: 0.4 }}
                             whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(255, 59, 48, 0.2)" }}
                           >
                             <div className="font-semibold">CBSE 10th Board</div>
