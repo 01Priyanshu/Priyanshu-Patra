@@ -440,173 +440,107 @@ export default function Home() {
                       animate={{ opacity: 1, scale: 1, rotateY: 0 }}
                       transition={{ duration: 0.8, delay: 0.4, type: "spring" }}
                     >
-                      <div className="relative w-[500px] h-[500px] flex items-center justify-center">
-                        {/* Orbiting particles container */}
-                        <div className="absolute inset-0 flex items-center justify-center overflow-visible">
-                          {/* Outer orbit ring */}
-                          <motion.div
-                            className="absolute w-[500px] h-[500px] rounded-full border border-primary/20 border-dashed"
-                            animate={{ rotate: 360 }}
-                            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                          />
-                          {/* Middle orbit ring */}
-                          <motion.div
-                            className="absolute w-[420px] h-[420px] rounded-full border border-primary/10"
-                            animate={{ rotate: -360 }}
-                            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                          />
-                          
-                          {/* Orbiting particles - Outer ring */}
-                          <motion.div
-                            className="absolute w-[500px] h-[500px]"
-                            animate={{ rotate: 360 }}
-                            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                          >
-                            {[...Array(12)].map((_, i) => (
-                              <motion.div
-                                key={`outer-${i}`}
-                                className="absolute w-3 h-3 bg-primary rounded-full"
-                                style={{
-                                  top: '50%',
-                                  left: '50%',
-                                  transform: `rotate(${i * 30}deg) translateX(250px) translateY(-50%)`,
-                                }}
-                                animate={{
-                                  scale: [1, 1.5, 1],
-                                  opacity: [0.4, 1, 0.4],
-                                }}
-                                transition={{
-                                  duration: 2,
-                                  repeat: Infinity,
-                                  delay: i * 0.15,
-                                }}
-                              />
-                            ))}
-                          </motion.div>
-
-                          {/* Orbiting particles - Middle ring (counter-clockwise) */}
-                          <motion.div
-                            className="absolute w-[420px] h-[420px]"
-                            animate={{ rotate: -360 }}
-                            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                          >
-                            {[...Array(8)].map((_, i) => (
-                              <motion.div
-                                key={`middle-${i}`}
-                                className="absolute w-2 h-2 bg-accent rounded-full"
-                                style={{
-                                  top: '50%',
-                                  left: '50%',
-                                  transform: `rotate(${i * 45}deg) translateX(210px) translateY(-50%)`,
-                                }}
-                                animate={{
-                                  scale: [1, 1.8, 1],
-                                  opacity: [0.3, 0.9, 0.3],
-                                }}
-                                transition={{
-                                  duration: 1.5,
-                                  repeat: Infinity,
-                                  delay: i * 0.2,
-                                }}
-                              />
-                            ))}
-                          </motion.div>
-
-                          {/* Orbiting particles - Inner ring */}
-                          <motion.div
-                            className="absolute w-[340px] h-[340px]"
-                            animate={{ rotate: 360 }}
-                            transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-                          >
-                            {[...Array(6)].map((_, i) => (
-                              <motion.div
-                                key={`inner-${i}`}
-                                className="absolute w-1.5 h-1.5 bg-secondary rounded-full"
-                                style={{
-                                  top: '50%',
-                                  left: '50%',
-                                  transform: `rotate(${i * 60}deg) translateX(170px) translateY(-50%)`,
-                                }}
-                                animate={{
-                                  scale: [1, 2, 1],
-                                  opacity: [0.5, 1, 0.5],
-                                }}
-                                transition={{
-                                  duration: 1.2,
-                                  repeat: Infinity,
-                                  delay: i * 0.25,
-                                }}
-                              />
-                            ))}
-                          </motion.div>
-
-                          {/* Random floating particles */}
-                          {[...Array(20)].map((_, i) => (
-                            <motion.div
-                              key={`float-${i}`}
-                              className="absolute w-1 h-1 bg-primary/60 rounded-full"
+                      <div className="relative w-[450px] h-[450px] flex items-center justify-center">
+                        {/* Faint orbit guide lines */}
+                        <div className="absolute w-[380px] h-[380px] rounded-full border border-blue-400/20" />
+                        <div className="absolute w-[320px] h-[320px] rounded-full border border-blue-400/10 border-dashed" />
+                        
+                        {/* Orbit Layer 1 - Outermost scattered dots (slow) */}
+                        <motion.div
+                          className="absolute w-[420px] h-[420px]"
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                        >
+                          {[0, 30, 75, 120, 170, 210, 260, 310].map((angle, i) => (
+                            <div
+                              key={`o1-${i}`}
+                              className="absolute bg-blue-500 rounded-full"
                               style={{
-                                top: `${20 + Math.random() * 60}%`,
-                                left: `${20 + Math.random() * 60}%`,
-                              }}
-                              animate={{
-                                y: [0, -20, 0],
-                                x: [0, Math.random() * 20 - 10, 0],
-                                opacity: [0, 1, 0],
-                                scale: [0, 1.5, 0],
-                              }}
-                              transition={{
-                                duration: 3 + Math.random() * 2,
-                                repeat: Infinity,
-                                delay: i * 0.3,
+                                width: `${6 + (i % 3) * 4}px`,
+                                height: `${6 + (i % 3) * 4}px`,
+                                top: '50%',
+                                left: '50%',
+                                transform: `rotate(${angle}deg) translateX(${195 + (i % 2) * 15}px) translateY(-50%)`,
                               }}
                             />
                           ))}
-                        </div>
+                        </motion.div>
 
+                        {/* Orbit Layer 2 - Middle dots (medium speed, counter) */}
+                        <motion.div
+                          className="absolute w-[350px] h-[350px]"
+                          animate={{ rotate: -360 }}
+                          transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+                        >
+                          {[15, 55, 100, 145, 190, 235, 280, 325].map((angle, i) => (
+                            <div
+                              key={`o2-${i}`}
+                              className="absolute bg-blue-500 rounded-full"
+                              style={{
+                                width: `${5 + (i % 4) * 3}px`,
+                                height: `${5 + (i % 4) * 3}px`,
+                                top: '50%',
+                                left: '50%',
+                                transform: `rotate(${angle}deg) translateX(${160 + (i % 3) * 10}px) translateY(-50%)`,
+                              }}
+                            />
+                          ))}
+                        </motion.div>
+
+                        {/* Orbit Layer 3 - Inner ring dots (faster) */}
+                        <motion.div
+                          className="absolute w-[280px] h-[280px]"
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+                        >
+                          {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
+                            <div
+                              key={`o3-${i}`}
+                              className="absolute bg-blue-500 rounded-full"
+                              style={{
+                                width: `${4 + (i % 2) * 3}px`,
+                                height: `${4 + (i % 2) * 3}px`,
+                                top: '50%',
+                                left: '50%',
+                                transform: `rotate(${angle}deg) translateX(${130 + (i % 2) * 8}px) translateY(-50%)`,
+                              }}
+                            />
+                          ))}
+                        </motion.div>
+
+                        {/* Extra scattered dots at various distances */}
+                        <motion.div
+                          className="absolute w-[400px] h-[400px]"
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
+                        >
+                          {[20, 70, 140, 200, 250, 300].map((angle, i) => (
+                            <div
+                              key={`scatter-${i}`}
+                              className="absolute bg-blue-500/80 rounded-full"
+                              style={{
+                                width: `${3 + (i % 3) * 2}px`,
+                                height: `${3 + (i % 3) * 2}px`,
+                                top: '50%',
+                                left: '50%',
+                                transform: `rotate(${angle}deg) translateX(${185 + (i % 2) * 20}px) translateY(-50%)`,
+                              }}
+                            />
+                          ))}
+                        </motion.div>
+
+                        {/* Profile image with light blue ring */}
                         <div className="relative z-10">
-                          <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-primary via-accent to-secondary opacity-30 blur-lg animate-pulse-slow"></div>
+                          <div className="absolute -inset-3 rounded-full bg-gradient-to-br from-blue-200 via-blue-100 to-blue-200 opacity-90" />
+                          <div className="absolute -inset-1 rounded-full bg-background" />
                           <Image
                             src={"/images/profile.jpg"}
-                            width={280}
-                            height={280}
+                            width={200}
+                            height={200}
                             alt="Profile"
-                            className="rounded-full shadow-lg shadow-primary/20 border-4 border-background hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 relative z-10"
+                            className="rounded-full relative z-10"
                           />
                         </div>
-                        <motion.div
-                          className="absolute bottom-[80px] right-[60px] w-20 h-20 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center z-20 border border-primary/30"
-                          animate={{
-                            scale: [1, 1.15, 1],
-                            rotate: [0, 10, 0],
-                          }}
-                          transition={{
-                            duration: 5,
-                            repeat: Number.POSITIVE_INFINITY,
-                            repeatType: "reverse",
-                          }}
-                        >
-                          <span className="text-primary font-bold text-xs text-center">
-                            Data
-                            <br />
-                            Science
-                          </span>
-                        </motion.div>
-                        <motion.div
-                          className="absolute top-[80px] left-[60px] w-16 h-16 bg-accent/20 backdrop-blur-sm rounded-full flex items-center justify-center z-20 border border-accent/30"
-                          animate={{
-                            scale: [1, 1.1, 1],
-                            rotate: [0, -5, 0],
-                          }}
-                          transition={{
-                            duration: 4,
-                            repeat: Number.POSITIVE_INFINITY,
-                            repeatType: "reverse",
-                            delay: 1,
-                          }}
-                        >
-                          <span className="text-accent font-bold text-xs">ML</span>
-                        </motion.div>
                       </div>
                     </motion.div>
                   </div>
