@@ -441,6 +441,129 @@ export default function Home() {
                       transition={{ duration: 0.8, delay: 0.4, type: "spring" }}
                     >
                       <div className="relative">
+                        {/* Orbiting particles container */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          {/* Outer orbit ring */}
+                          <motion.div
+                            className="absolute w-[500px] h-[500px] rounded-full border border-primary/20 border-dashed"
+                            animate={{ rotate: 360 }}
+                            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                          />
+                          {/* Middle orbit ring */}
+                          <motion.div
+                            className="absolute w-[420px] h-[420px] rounded-full border border-primary/10"
+                            animate={{ rotate: -360 }}
+                            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                          />
+                          
+                          {/* Orbiting particles - Outer ring */}
+                          <motion.div
+                            className="absolute w-[500px] h-[500px]"
+                            animate={{ rotate: 360 }}
+                            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                          >
+                            {[...Array(12)].map((_, i) => (
+                              <motion.div
+                                key={`outer-${i}`}
+                                className="absolute w-3 h-3 bg-primary rounded-full"
+                                style={{
+                                  top: '50%',
+                                  left: '50%',
+                                  transform: `rotate(${i * 30}deg) translateX(250px) translateY(-50%)`,
+                                }}
+                                animate={{
+                                  scale: [1, 1.5, 1],
+                                  opacity: [0.4, 1, 0.4],
+                                }}
+                                transition={{
+                                  duration: 2,
+                                  repeat: Infinity,
+                                  delay: i * 0.15,
+                                }}
+                              />
+                            ))}
+                          </motion.div>
+
+                          {/* Orbiting particles - Middle ring (counter-clockwise) */}
+                          <motion.div
+                            className="absolute w-[420px] h-[420px]"
+                            animate={{ rotate: -360 }}
+                            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                          >
+                            {[...Array(8)].map((_, i) => (
+                              <motion.div
+                                key={`middle-${i}`}
+                                className="absolute w-2 h-2 bg-accent rounded-full"
+                                style={{
+                                  top: '50%',
+                                  left: '50%',
+                                  transform: `rotate(${i * 45}deg) translateX(210px) translateY(-50%)`,
+                                }}
+                                animate={{
+                                  scale: [1, 1.8, 1],
+                                  opacity: [0.3, 0.9, 0.3],
+                                }}
+                                transition={{
+                                  duration: 1.5,
+                                  repeat: Infinity,
+                                  delay: i * 0.2,
+                                }}
+                              />
+                            ))}
+                          </motion.div>
+
+                          {/* Orbiting particles - Inner ring */}
+                          <motion.div
+                            className="absolute w-[340px] h-[340px]"
+                            animate={{ rotate: 360 }}
+                            transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+                          >
+                            {[...Array(6)].map((_, i) => (
+                              <motion.div
+                                key={`inner-${i}`}
+                                className="absolute w-1.5 h-1.5 bg-secondary rounded-full"
+                                style={{
+                                  top: '50%',
+                                  left: '50%',
+                                  transform: `rotate(${i * 60}deg) translateX(170px) translateY(-50%)`,
+                                }}
+                                animate={{
+                                  scale: [1, 2, 1],
+                                  opacity: [0.5, 1, 0.5],
+                                }}
+                                transition={{
+                                  duration: 1.2,
+                                  repeat: Infinity,
+                                  delay: i * 0.25,
+                                }}
+                              />
+                            ))}
+                          </motion.div>
+
+                          {/* Random floating particles */}
+                          {[...Array(20)].map((_, i) => (
+                            <motion.div
+                              key={`float-${i}`}
+                              className="absolute w-1 h-1 bg-primary/60 rounded-full"
+                              style={{
+                                top: `${20 + Math.random() * 60}%`,
+                                left: `${20 + Math.random() * 60}%`,
+                              }}
+                              animate={{
+                                y: [0, -20, 0],
+                                x: [0, Math.random() * 20 - 10, 0],
+                                opacity: [0, 1, 0],
+                                scale: [0, 1.5, 0],
+                              }}
+                              transition={{
+                                duration: 3 + Math.random() * 2,
+                                repeat: Infinity,
+                                delay: i * 0.3,
+                              }}
+                            />
+                          ))}
+                        </div>
+
                         <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-primary via-accent to-secondary opacity-30 blur-lg animate-pulse-slow"></div>
                         <Image
                           src={"/images/profile.jpg"}
@@ -620,7 +743,7 @@ portfolio()`}
                                   Master of Science in Data Science, Analytics and Engineering
                                 </div>
                                 <div className="text-sm text-muted-foreground">
-                                  Arizona State University, Tempe, USA • Aug 2024 - Present
+                                  Arizona State University, Tempe, USA • Aug 2025 - Present
                                 </div>
                                 <p className="text-sm text-muted-foreground">GPA: 3.89/4.0</p>
                               </div>
