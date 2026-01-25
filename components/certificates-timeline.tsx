@@ -12,7 +12,7 @@ export default function CertificatesTimeline() {
       issuer: "CodeWithHarry",
       date: "Dec 2025",
       icon: <Award className="h-5 w-5 text-primary" />,
-      imagePath: "/images/codewithharry-datascience-certificate.jpg",
+      imagePath: "/images/codewithharry-datascience-certificate.png",
       description:
         "Comprehensive data science course covering Python, Machine Learning, Data Analysis, and real-world projects. Certificate ID: CWH-THE-ULTIMATE-JOB-READY-DATA-SCIENCE-COURSE-74J6948W",
     },
