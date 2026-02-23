@@ -159,6 +159,16 @@ export default function Home() {
       github: "https://github.com",
       demo: "https://example.com",
     },
+    {
+      title: "E-Commerce Intelligence & Recommendation Platform",
+      description:
+        "Built an end-to-end ML-powered e-commerce analytics and recommendation system, including automated ETL pipelines, customer insights, and real-time prediction APIs.",
+      image: "/images/ecommerce-recommendation.jpg",
+      tags: ["Machine Learning", "ETL", "Python", "Recommendation Systems"],
+      category: "ml",
+      github: "https://github.com",
+      demo: "https://example.com",
+    },
   ]
 
   // Background color transitions
