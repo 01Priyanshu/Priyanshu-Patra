@@ -159,6 +159,16 @@ export default function Home() {
       github: "https://github.com",
       demo: "https://example.com",
     },
+    {
+      title: "E-Commerce Intelligence & Recommendation Platform",
+      description:
+        "Built an end-to-end ML-powered e-commerce analytics and recommendation system, including automated ETL pipelines, customer insights, and real-time prediction APIs.",
+      image: "/images/ecommerce-recommendation.jpg",
+      tags: ["Machine Learning", "ETL", "Python", "Recommendation Systems"],
+      category: "ml",
+      github: "https://github.com",
+      demo: "https://example.com",
+    },
   ]
 
   // Background color transitions
@@ -440,48 +450,107 @@ export default function Home() {
                       animate={{ opacity: 1, scale: 1, rotateY: 0 }}
                       transition={{ duration: 0.8, delay: 0.4, type: "spring" }}
                     >
-                      <div className="relative">
-                        <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-primary via-accent to-secondary opacity-30 blur-lg animate-pulse-slow"></div>
-                        <Image
-                          src={"/images/profile.jpg"}
-                          width={400}
-                          height={400}
-                          alt="Profile"
-                          className="rounded-xl shadow-lg shadow-primary/20 border border-primary/10 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 hover:scale-105 relative z-10"
-                        />
+                      <div className="relative w-[450px] h-[450px] flex items-center justify-center">
+                        {/* Faint orbit guide lines */}
+                        <div className="absolute w-[380px] h-[380px] rounded-full border border-blue-400/20" />
+                        <div className="absolute w-[320px] h-[320px] rounded-full border border-blue-400/10 border-dashed" />
+                        
+                        {/* Orbit Layer 1 - Outermost scattered dots (slow) */}
                         <motion.div
-                          className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center"
-                          animate={{
-                            scale: [1, 1.2, 1],
-                            rotate: [0, 10, 0],
-                          }}
-                          transition={{
-                            duration: 5,
-                            repeat: Number.POSITIVE_INFINITY,
-                            repeatType: "reverse",
-                          }}
+                          className="absolute w-[420px] h-[420px]"
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
                         >
-                          <span className="text-primary font-bold">
-                            Data
-                            <br />
-                            Science
-                          </span>
+                          {[0, 30, 75, 120, 170, 210, 260, 310].map((angle, i) => (
+                            <div
+                              key={`o1-${i}`}
+                              className="absolute bg-blue-500 rounded-full"
+                              style={{
+                                width: `${6 + (i % 3) * 4}px`,
+                                height: `${6 + (i % 3) * 4}px`,
+                                top: '50%',
+                                left: '50%',
+                                transform: `rotate(${angle}deg) translateX(${195 + (i % 2) * 15}px) translateY(-50%)`,
+                              }}
+                            />
+                          ))}
                         </motion.div>
+
+                        {/* Orbit Layer 2 - Middle dots (medium speed, counter) */}
                         <motion.div
-                          className="absolute -top-4 -left-4 w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center"
-                          animate={{
-                            scale: [1, 1.1, 1],
-                            rotate: [0, -5, 0],
-                          }}
-                          transition={{
-                            duration: 4,
-                            repeat: Number.POSITIVE_INFINITY,
-                            repeatType: "reverse",
-                            delay: 1,
-                          }}
+                          className="absolute w-[350px] h-[350px]"
+                          animate={{ rotate: -360 }}
+                          transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
                         >
-                          <span className="text-accent font-bold">ML</span>
+                          {[15, 55, 100, 145, 190, 235, 280, 325].map((angle, i) => (
+                            <div
+                              key={`o2-${i}`}
+                              className="absolute bg-blue-500 rounded-full"
+                              style={{
+                                width: `${5 + (i % 4) * 3}px`,
+                                height: `${5 + (i % 4) * 3}px`,
+                                top: '50%',
+                                left: '50%',
+                                transform: `rotate(${angle}deg) translateX(${160 + (i % 3) * 10}px) translateY(-50%)`,
+                              }}
+                            />
+                          ))}
                         </motion.div>
+
+                        {/* Orbit Layer 3 - Inner ring dots (faster) */}
+                        <motion.div
+                          className="absolute w-[280px] h-[280px]"
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+                        >
+                          {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
+                            <div
+                              key={`o3-${i}`}
+                              className="absolute bg-blue-500 rounded-full"
+                              style={{
+                                width: `${4 + (i % 2) * 3}px`,
+                                height: `${4 + (i % 2) * 3}px`,
+                                top: '50%',
+                                left: '50%',
+                                transform: `rotate(${angle}deg) translateX(${130 + (i % 2) * 8}px) translateY(-50%)`,
+                              }}
+                            />
+                          ))}
+                        </motion.div>
+
+                        {/* Extra scattered dots at various distances */}
+                        <motion.div
+                          className="absolute w-[400px] h-[400px]"
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
+                        >
+                          {[20, 70, 140, 200, 250, 300].map((angle, i) => (
+                            <div
+                              key={`scatter-${i}`}
+                              className="absolute bg-blue-500/80 rounded-full"
+                              style={{
+                                width: `${3 + (i % 3) * 2}px`,
+                                height: `${3 + (i % 3) * 2}px`,
+                                top: '50%',
+                                left: '50%',
+                                transform: `rotate(${angle}deg) translateX(${185 + (i % 2) * 20}px) translateY(-50%)`,
+                              }}
+                            />
+                          ))}
+                        </motion.div>
+
+                        {/* Profile image with light blue ring */}
+                        <div className="relative z-10">
+                          <div className="absolute -inset-3 rounded-full bg-gradient-to-br from-blue-200 via-blue-100 to-blue-200 opacity-90" />
+                          <div className="absolute -inset-1 rounded-full bg-background" />
+                          <Image
+                            src={"/images/profile.jpg"}
+                            width={200}
+                            height={200}
+                            alt="Profile"
+                            className="rounded-full relative z-10"
+                          />
+                        </div>
                       </div>
                     </motion.div>
                   </div>
@@ -601,25 +670,68 @@ portfolio()`}
                         </motion.h3>
                         <ul className="space-y-4">
                           <motion.li
-                            className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light transition-all duration-300 hover:translate-x-2 animated-border cursor-hover"
+                            className="flex flex-col gap-2 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light transition-all duration-300 hover:translate-x-2 animated-border cursor-hover"
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
                             whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(255, 59, 48, 0.2)" }}
                           >
-                            <div className="font-semibold">
-                              Bachelor of Technology (B.Tech) in Computer Science and Engineering
+                            <div className="flex items-center gap-3">
+                              <Image
+                                src="/images/asu-logo.png"
+                                alt="Arizona State University"
+                                width={50}
+                                height={50}
+                                className="rounded-md bg-white p-1"
+                              />
+                              <div>
+                                <div className="font-semibold">
+                                  Master of Science in Data Science, Analytics and Engineering
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  Arizona State University, Tempe, USA • Aug 2025 - Present
+                                </div>
+                                <p className="text-sm text-muted-foreground">GPA: 3.89/4.0</p>
+                              </div>
                             </div>
-                            <div className="text-sm text-muted-foreground">
-                              SRM Institute of Science and Technology, Chennai • Sep 2020 - May 2024
+                            <div className="text-xs text-muted-foreground mt-1">
+                              <span className="font-medium text-primary">Relevant Coursework:</span> DSE 501 – Statistics for Data Analysts, CSE 511 – Data Processing at Scale, CSE 543 – Information Assurance and Security, CSE 578 – Data Visualization, CSE 575 – Statistical Machine Learning, CSE 572 – Data Mining
                             </div>
-                            <p className="text-sm text-muted-foreground">CGPA: 8.9/10</p>
+                          </motion.li>
+                          <motion.li
+                            className="flex flex-col gap-2 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light transition-all duration-300 hover:translate-x-2 animated-border cursor-hover"
+                            initial={{ opacity: 0, x: -50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(255, 59, 48, 0.2)" }}
+                          >
+                            <div className="flex items-center gap-3">
+                              <Image
+                                src="/images/srm-logo.png"
+                                alt="SRM Institute of Science and Technology"
+                                width={50}
+                                height={50}
+                                className="rounded-md bg-white p-1"
+                              />
+                              <div>
+                                <div className="font-semibold">
+                                  Bachelor of Technology (B.Tech) in Computer Science and Engineering
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  SRM Institute of Science and Technology, Chennai • Sep 2020 - May 2024
+                                </div>
+                                <p className="text-sm text-muted-foreground">CGPA: 8.9/10</p>
+                              </div>
+                            </div>
+                            <div className="text-xs text-muted-foreground mt-1">
+                              <span className="font-medium text-primary">Relevant Coursework:</span> Data Structures and Algorithms, Database Management Systems (DBMS), Object-Oriented Programming (OOP), Computer Networks, Artificial Intelligence & Machine Learning, Web Development
+                            </div>
                           </motion.li>
                           <motion.li
                             className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light transition-all duration-300 hover:translate-x-2 animated-border cursor-hover"
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
+                            transition={{ duration: 0.5, delay: 0.3 }}
                             whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(255, 59, 48, 0.2)" }}
                           >
                             <div className="font-semibold">CBSE 12th Board (Physics, Chemistry, Mathematics)</div>
@@ -631,7 +743,7 @@ portfolio()`}
                             className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light transition-all duration-300 hover:translate-x-2 animated-border cursor-hover"
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5, delay: 0.3 }}
+                            transition={{ duration: 0.5, delay: 0.4 }}
                             whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(255, 59, 48, 0.2)" }}
                           >
                             <div className="font-semibold">CBSE 10th Board</div>
