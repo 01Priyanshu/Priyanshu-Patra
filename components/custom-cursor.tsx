@@ -1,50 +1,90 @@
 "use client"
 
-import { useEffect, useRef, useCallback } from "react"
+import { useEffect, useState } from "react"
+import { motion } from "framer-motion"
 
 export default function CustomCursor() {
-  const cursorRef = useRef<HTMLDivElement>(null)
-  const rafRef = useRef<number>(0)
-  const posRef = useRef({ x: 0, y: 0 })
-
-  const updateCursor = useCallback(() => {
-    if (cursorRef.current) {
-      cursorRef.current.style.transform = `translate3d(${posRef.current.x - 8}px, ${posRef.current.y - 8}px, 0)`
-    }
-  }, [])
+  const [position, setPosition] = useState({ x: 0, y: 0 })
+  const [clicked, setClicked] = useState(false)
+  const [linkHovered, setLinkHovered] = useState(false)
+  const [hidden, setHidden] = useState(true)
 
   useEffect(() => {
-    const onMouseMove = (e: MouseEvent) => {
-      posRef.current = { x: e.clientX, y: e.clientY }
-      cancelAnimationFrame(rafRef.current)
-      rafRef.current = requestAnimationFrame(updateCursor)
+    const addEventListeners = () => {
+      document.addEventListener("mousemove", onMouseMove)
+      document.addEventListener("mouseenter", onMouseEnter)
+      document.addEventListener("mouseleave", onMouseLeave)
+      document.addEventListener("mousedown", onMouseDown)
+      document.addEventListener("mouseup", onMouseUp)
     }
 
-    const onMouseEnter = () => {
-      if (cursorRef.current) cursorRef.current.style.opacity = "1"
-    }
-
-    const onMouseLeave = () => {
-      if (cursorRef.current) cursorRef.current.style.opacity = "0"
-    }
-
-    document.addEventListener("mousemove", onMouseMove, { passive: true })
-    document.addEventListener("mouseenter", onMouseEnter)
-    document.addEventListener("mouseleave", onMouseLeave)
-
-    return () => {
+    const removeEventListeners = () => {
       document.removeEventListener("mousemove", onMouseMove)
       document.removeEventListener("mouseenter", onMouseEnter)
       document.removeEventListener("mouseleave", onMouseLeave)
-      cancelAnimationFrame(rafRef.current)
+      document.removeEventListener("mousedown", onMouseDown)
+      document.removeEventListener("mouseup", onMouseUp)
     }
-  }, [updateCursor])
+
+    const onMouseMove = (e: MouseEvent) => {
+      setPosition({ x: e.clientX, y: e.clientY })
+    }
+
+    const onMouseDown = () => {
+      setClicked(true)
+    }
+
+    const onMouseUp = () => {
+      setClicked(false)
+    }
+
+    const onMouseLeave = () => {
+      setHidden(true)
+    }
+
+    const onMouseEnter = () => {
+      setHidden(false)
+    }
+
+    const handleLinkHoverEvents = () => {
+      document.querySelectorAll("a, button, .cursor-hover").forEach((el) => {
+        el.addEventListener("mouseenter", () => setLinkHovered(true))
+        el.addEventListener("mouseleave", () => setLinkHovered(false))
+      })
+    }
+
+    addEventListeners()
+    handleLinkHoverEvents()
+
+    return () => {
+      removeEventListeners()
+    }
+  }, [])
 
   return (
-    <div
-      ref={cursorRef}
-      className="fixed top-0 left-0 z-[9999] pointer-events-none mix-blend-difference opacity-0 w-4 h-4 rounded-full bg-primary"
-      style={{ willChange: "transform" }}
-    />
+    <motion.div
+      className="cursor-wrapper fixed top-0 left-0 z-[9999] pointer-events-none mix-blend-difference"
+      animate={{
+        x: position.x - (linkHovered ? 16 : clicked ? 12 : 8),
+        y: position.y - (linkHovered ? 16 : clicked ? 12 : 8),
+        opacity: hidden ? 0 : 1,
+        scale: linkHovered ? 1.2 : clicked ? 0.8 : 1,
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 800,
+        damping: 20,
+        mass: 0.2,
+      }}
+    >
+      <motion.div
+        className={`rounded-full bg-primary ${
+          linkHovered ? "w-8 h-8" : clicked ? "w-6 h-6" : "w-4 h-4"
+        } flex items-center justify-center`}
+        animate={{
+          scale: linkHovered ? 1.2 : clicked ? 0.8 : 1,
+        }}
+      />
+    </motion.div>
   )
 }

@@ -36,6 +36,8 @@ import CertificatePreview from "@/components/certificate-preview"
 import CodeEditor from "@/components/code-editor"
 import CustomCursor from "@/components/custom-cursor"
 import SectionTransition from "@/components/section-transition"
+import ColorTransition from "@/components/color-transition"
+// Update the import section to include the ResumePreview component
 import ProjectCard from "@/components/project-card"
 
 export default function Home() {
@@ -169,26 +171,56 @@ export default function Home() {
     },
   ]
 
+  // Background color transitions
+  const backgroundColors = [
+    "hsl(222, 47%, 11%)", // Default background
+    "hsl(230, 47%, 13%)", // Slightly bluer
+    "hsl(240, 47%, 15%)", // More purple
+    "hsl(250, 47%, 13%)", // Deep purple
+    "hsl(220, 47%, 11%)", // Back to default
+  ]
+
   return (
     <div className="flex min-h-screen flex-col bg-background overflow-hidden">
       {/* Custom Cursor */}
       <CustomCursor />
 
-      {/* Background Elements - static for performance */}
+      {/* Color Transition Background */}
+      <ColorTransition colors={backgroundColors} duration={20} />
+
+      {/* Background Elements */}
       <div className="fixed inset-0 z-0 overflow-hidden">
-        <div
+        <motion.div
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: "radial-gradient(circle, rgba(255,59,48,0.2) 1px, transparent 1px)",
             backgroundSize: "30px 30px",
           }}
+          animate={{
+            scale: [1, 1.1, 1],
+            rotate: [0, 5, 0],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Number.POSITIVE_INFINITY,
+            repeatType: "reverse",
+          }}
         />
-        <div
+        <motion.div
           className="absolute inset-0 opacity-5"
           style={{
             backgroundImage:
               "linear-gradient(to right, rgba(255,59,48,0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,59,48,0.1) 1px, transparent 1px)",
             backgroundSize: "50px 50px",
+          }}
+          animate={{
+            x: [0, 20, 0],
+            y: [0, 10, 0],
+          }}
+          transition={{
+            duration: 30,
+            repeat: Number.POSITIVE_INFINITY,
+            repeatType: "reverse",
           }}
         />
       </div>
@@ -423,8 +455,12 @@ export default function Home() {
                         <div className="absolute w-[380px] h-[380px] rounded-full border border-blue-400/20" />
                         <div className="absolute w-[320px] h-[320px] rounded-full border border-blue-400/10 border-dashed" />
                         
-                        {/* Orbit Layer 1 - CSS animation for performance */}
-                        <div className="absolute w-[420px] h-[420px] orbit-cw-slow">
+                        {/* Orbit Layer 1 - Outermost scattered dots (slow) */}
+                        <motion.div
+                          className="absolute w-[420px] h-[420px]"
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                        >
                           {[0, 30, 75, 120, 170, 210, 260, 310].map((angle, i) => (
                             <div
                               key={`o1-${i}`}
@@ -438,10 +474,14 @@ export default function Home() {
                               }}
                             />
                           ))}
-                        </div>
+                        </motion.div>
 
-                        {/* Orbit Layer 2 */}
-                        <div className="absolute w-[350px] h-[350px] orbit-ccw-med">
+                        {/* Orbit Layer 2 - Middle dots (medium speed, counter) */}
+                        <motion.div
+                          className="absolute w-[350px] h-[350px]"
+                          animate={{ rotate: -360 }}
+                          transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+                        >
                           {[15, 55, 100, 145, 190, 235, 280, 325].map((angle, i) => (
                             <div
                               key={`o2-${i}`}
@@ -455,10 +495,14 @@ export default function Home() {
                               }}
                             />
                           ))}
-                        </div>
+                        </motion.div>
 
-                        {/* Orbit Layer 3 */}
-                        <div className="absolute w-[280px] h-[280px] orbit-cw-fast">
+                        {/* Orbit Layer 3 - Inner ring dots (faster) */}
+                        <motion.div
+                          className="absolute w-[280px] h-[280px]"
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+                        >
                           {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
                             <div
                               key={`o3-${i}`}
@@ -472,10 +516,14 @@ export default function Home() {
                               }}
                             />
                           ))}
-                        </div>
+                        </motion.div>
 
-                        {/* Extra scattered dots */}
-                        <div className="absolute w-[400px] h-[400px] orbit-cw-xslow">
+                        {/* Extra scattered dots at various distances */}
+                        <motion.div
+                          className="absolute w-[400px] h-[400px]"
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
+                        >
                           {[20, 70, 140, 200, 250, 300].map((angle, i) => (
                             <div
                               key={`scatter-${i}`}
@@ -489,7 +537,7 @@ export default function Home() {
                               }}
                             />
                           ))}
-                        </div>
+                        </motion.div>
 
                         {/* Profile image with light blue ring */}
                         <div className="relative z-10">
