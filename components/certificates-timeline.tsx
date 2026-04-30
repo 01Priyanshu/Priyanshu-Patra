@@ -8,13 +8,13 @@ export default function CertificatesTimeline() {
   const certificates = [
     {
       id: 1,
-      title: "The Ultimate Job Ready Data Science Course",
-      issuer: "CodeWithHarry",
-      date: "Dec 2025",
+      title: "Microsoft AI & ML Engineering",
+      issuer: "Coursera",
+      date: "Mar 2025",
       icon: <Award className="h-5 w-5 text-primary" />,
-      imagePath: "/images/codewithharry-datascience-certificate.png",
+      imagePath: "/images/microsoft-ai-ml.png",
       description:
-        "Comprehensive data science course covering Python, Machine Learning, Data Analysis, and real-world projects. Certificate ID: CWH-THE-ULTIMATE-JOB-READY-DATA-SCIENCE-COURSE-74J6948W",
+        "This comprehensive program is designed to equip students with the knowledge and skills required to navigate the ever-evolving world of artificial intelligence and machine learning (AI & ML). Comprising five courses covering AI & ML topics from foundational infrastructure to advanced applications.",
     },
     {
       id: 2,
@@ -34,13 +34,13 @@ export default function CertificatesTimeline() {
     },
     {
       id: 4,
-      title: "Microsoft AI & ML Engineering",
-      issuer: "Coursera",
-      date: "Sep 2024",
+      title: "The Ultimate Job Ready Data Science Course",
+      issuer: "CodeWithHarry",
+      date: "Dec 2025",
       icon: <Award className="h-5 w-5 text-primary" />,
-      imagePath: "/images/microsoft-ai-ml.png",
+      imagePath: "/images/codewithharry-datascience-certificate.png",
       description:
-        "This comprehensive program is designed to equip students with the knowledge and skills required to navigate the ever-evolving world of artificial intelligence and machine learning (AI & ML).",
+        "Comprehensive data science course covering Python, Machine Learning, Data Analysis, and real-world projects. Certificate ID: CWH-THE-ULTIMATE-JOB-READY-DATA-SCIENCE-COURSE-74J6948W",
     },
     {
       id: 5,
