@@ -428,7 +428,6 @@ export default function Home() {
                               href="/Priyanshu_Patra_Resume.pdf"
                               target="_blank"
                               rel="noopener noreferrer"
-                              download
                             >
                               <Download className="mr-2 h-4 w-4" />
                               Download CV
