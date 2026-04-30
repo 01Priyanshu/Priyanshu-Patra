@@ -425,9 +425,10 @@ export default function Home() {
                             className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 glow-on-hover liquid-button"
                           >
                             <Link
-                              href="https://docs.google.com/document/d/15NyxueXu_9Hkcnhk7rY34VGSEcjQLlLkbh282r1hJe4/edit?tab=t.0"
+                              href="/Priyanshu_Patra_Resume.pdf"
                               target="_blank"
                               rel="noopener noreferrer"
+                              download
                             >
                               <Download className="mr-2 h-4 w-4" />
                               Download CV
