@@ -423,7 +423,7 @@ export default function Home() {
                             className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 glow-on-hover liquid-button"
                           >
                             <Link
-                              href="https://blobs.vusercontent.net/blob/Priyanshu%20Patra_Resume-J0CfRTW1pZr9CGYnvh52TRobdtp9WN.pdf"
+                              href="https://blobs.vusercontent.net/blob/Priyanshu%20Patra_Resume-D94BGtg6RKXWO7SsRlAGKhBWwuIMl0.pdf"
                               target="_blank"
                               rel="noopener noreferrer"
                             >
@@ -601,7 +601,7 @@ portfolio()`}
                                 <div className="text-sm text-muted-foreground">
                                   Arizona State University, Tempe, USA • Aug 2025 - Present
                                 </div>
-                                <p className="text-sm text-muted-foreground">GPA: 3.89/4.0</p>
+                                <p className="text-sm text-muted-foreground">GPA: 4.0/4.0</p>
                               </div>
                             </div>
                             <div className="text-xs text-muted-foreground mt-1">
@@ -636,33 +636,6 @@ portfolio()`}
                             <div className="text-xs text-muted-foreground mt-1">
                               <span className="font-medium text-primary">Relevant Coursework:</span> Data Structures and Algorithms, Database Management Systems (DBMS), Object-Oriented Programming (OOP), Computer Networks, Artificial Intelligence & Machine Learning, Web Development
                             </div>
-                          </motion.li>
-                          <motion.li
-                            className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light transition-all duration-300 hover:translate-x-2 animated-border cursor-hover"
-                            initial={{ opacity: 0, x: -50 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5, delay: 0.3 }}
-                            whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(255, 59, 48, 0.2)" }}
-                          >
-                            <div className="font-semibold">CBSE 12th Board (Physics, Chemistry, Mathematics)</div>
-                            <div className="text-sm text-muted-foreground">
-                              St. Ann's School, Ahmedabad • Apr 2018 - Mar 2020
-                            </div>
-                          </motion.li>
-                          <motion.li
-                            className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light transition-all duration-300 hover:translate-x-2 animated-border cursor-hover"
-                            initial={{ opacity: 0, x: -50 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
-                            whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(255, 59, 48, 0.2)" }}
-                          >
-                            <div className="font-semibold">CBSE 10th Board</div>
-                            <div className="text-sm text-muted-foreground">
-                              Delhi Public School, Bharuch • Apr 2017 - Mar 2018
-                            </div>
-                            <p className="text-sm text-muted-foreground">
-                              Received award for scoring highest marks in English and Mathematics
-                            </p>
                           </motion.li>
                         </ul>
                       </div>

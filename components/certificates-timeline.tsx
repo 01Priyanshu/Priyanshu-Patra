@@ -8,6 +8,16 @@ export default function CertificatesTimeline() {
   const certificates = [
     {
       id: 1,
+      title: "AWS Educate Introduction to Generative AI",
+      issuer: "AWS",
+      date: "Apr 2026",
+      icon: <Award className="h-5 w-5 text-primary" />,
+      imagePath: "/images/aws-generative-ai.png",
+      description:
+        "Completed AWS Educate training on Introduction to Generative AI, covering foundational concepts of generative AI, machine learning models, and practical applications.",
+    },
+    {
+      id: 2,
       title: "The Ultimate Job Ready Data Science Course",
       issuer: "CodeWithHarry",
       date: "Dec 2025",
@@ -17,7 +27,7 @@ export default function CertificatesTimeline() {
         "Comprehensive data science course covering Python, Machine Learning, Data Analysis, and real-world projects. Certificate ID: CWH-THE-ULTIMATE-JOB-READY-DATA-SCIENCE-COURSE-74J6948W",
     },
     {
-      id: 2,
+      id: 3,
       title: "Microsoft AI & ML Engineering",
       issuer: "Coursera",
       date: "Mar 2025",
@@ -27,7 +37,7 @@ export default function CertificatesTimeline() {
         "This comprehensive program is designed to equip students with the knowledge and skills required to navigate the ever-evolving world of artificial intelligence and machine learning (AI & ML). Comprising five courses covering AI & ML topics from foundational infrastructure to advanced applications.",
     },
     {
-      id: 3,
+      id: 4,
       title: "SQL Advanced",
       issuer: "HackerRank",
       date: "Mar 2025",
@@ -35,7 +45,7 @@ export default function CertificatesTimeline() {
       imagePath: "/images/sql-advanced.png",
     },
     {
-      id: 4,
+      id: 5,
       title: "Problem Solving (Intermediate)",
       issuer: "HackerRank",
       date: "Mar 2025",
@@ -43,7 +53,7 @@ export default function CertificatesTimeline() {
       imagePath: "/images/problem-solving-intermediate.png",
     },
     {
-      id: 5,
+      id: 6,
       title: "Data Science Job Simulation",
       issuer: "British Airways",
       date: "Feb 2025",
@@ -53,7 +63,7 @@ export default function CertificatesTimeline() {
         "Over the period of January 2025 to February 2025, completed practical tasks in: Web scraping to gain company insights and Predicting customer buying behaviour.",
     },
     {
-      id: 6,
+      id: 7,
       title: "JavaScript (Basic)",
       issuer: "HackerRank",
       date: "May 2023",
@@ -61,7 +71,7 @@ export default function CertificatesTimeline() {
       imagePath: "/images/javascript-basic.png",
     },
     {
-      id: 7,
+      id: 8,
       title: "Introduction to Programming with MATLAB",
       issuer: "Vanderbilt University",
       date: "Apr 2023",
@@ -70,7 +80,7 @@ export default function CertificatesTimeline() {
       description: "An online non-credit course authorized by Vanderbilt University and offered through Coursera.",
     },
     {
-      id: 8,
+      id: 9,
       title: "Oracle Database Foundations",
       issuer: "Oracle",
       date: "Mar 2023",
@@ -78,7 +88,7 @@ export default function CertificatesTimeline() {
       imagePath: "/images/oracle-database-foundations.png",
     },
     {
-      id: 9,
+      id: 10,
       title: "Token Service Technology Virtual Experience",
       issuer: "VISA",
       date: "Feb 2023",
@@ -88,7 +98,7 @@ export default function CertificatesTimeline() {
         "Over the period of February 2023, completed practical tasks in: Card Authentication and Select Visa API for Use Cases.",
     },
     {
-      id: 10,
+      id: 11,
       title: "SQL (Basic)",
       issuer: "HackerRank",
       date: "Feb 2023",
@@ -96,7 +106,7 @@ export default function CertificatesTimeline() {
       imagePath: "/images/sql-basic.png",
     },
     {
-      id: 11,
+      id: 12,
       title: "Problem Solving (Basic)",
       issuer: "HackerRank",
       date: "Nov 2022",
@@ -104,7 +114,7 @@ export default function CertificatesTimeline() {
       imagePath: "/images/problem-solving-basic.png",
     },
     {
-      id: 12,
+      id: 13,
       title: "Introduction to Cloud Computing",
       issuer: "Simplilearn",
       date: "Nov 2022",
@@ -112,7 +122,7 @@ export default function CertificatesTimeline() {
       imagePath: "/placeholder.svg?height=800&width=800&text=Simplilearn+Cloud+Computing+Certificate",
     },
     {
-      id: 13,
+      id: 14,
       title: "Introduction to Front-End Development",
       issuer: "Meta",
       date: "Nov 2022",
@@ -121,7 +131,7 @@ export default function CertificatesTimeline() {
       description: "An online non-credit course authorized by Meta and offered through Coursera.",
     },
     {
-      id: 14,
+      id: 15,
       title: "Getting Started with Networking",
       issuer: "AWS",
       date: "Aug 2022",
