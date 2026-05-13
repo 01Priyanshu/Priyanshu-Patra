@@ -55,24 +55,6 @@
   }
   body {
     @apply bg-background text-foreground;
-    cursor: none;
-  }
-
-  /* Hide default cursor when custom cursor is active */
-  a,
-  button,
-  .cursor-hover {
-    cursor: none !important;
-  }
-
-  /* For mobile devices, use default cursor */
-  @media (max-width: 768px) {
-    body,
-    a,
-    button,
-    .cursor-hover {
-      cursor: auto !important;
-    }
   }
 }
 

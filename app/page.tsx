@@ -34,7 +34,7 @@ import SocialSidebar from "@/components/social-sidebar"
 import CertificatesTimeline from "@/components/certificates-timeline"
 import CertificatePreview from "@/components/certificate-preview"
 import CodeEditor from "@/components/code-editor"
-import CustomCursor from "@/components/custom-cursor"
+
 import SectionTransition from "@/components/section-transition"
 import ColorTransition from "@/components/color-transition"
 // Update the import section to include the ResumePreview component
@@ -182,8 +182,6 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col bg-background overflow-hidden">
-      {/* Custom Cursor */}
-      <CustomCursor />
 
       {/* Color Transition Background */}
       <ColorTransition colors={backgroundColors} duration={20} />
@@ -425,7 +423,7 @@ export default function Home() {
                             className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 glow-on-hover liquid-button"
                           >
                             <Link
-                              href="https://docs.google.com/document/d/15NyxueXu_9Hkcnhk7rY34VGSEcjQLlLkbh282r1hJe4/edit?tab=t.0"
+                              href="https://blobs.vusercontent.net/blob/Priyanshu%20Patra_Resume-D94BGtg6RKXWO7SsRlAGKhBWwuIMl0.pdf"
                               target="_blank"
                               rel="noopener noreferrer"
                             >
@@ -450,103 +448,15 @@ export default function Home() {
                       animate={{ opacity: 1, scale: 1, rotateY: 0 }}
                       transition={{ duration: 0.8, delay: 0.4, type: "spring" }}
                     >
-                      <div className="relative w-[450px] h-[450px] flex items-center justify-center">
-                        {/* Faint orbit guide lines */}
-                        <div className="absolute w-[380px] h-[380px] rounded-full border border-blue-400/20" />
-                        <div className="absolute w-[320px] h-[320px] rounded-full border border-blue-400/10 border-dashed" />
-                        
-                        {/* Orbit Layer 1 - Outermost scattered dots (slow) */}
-                        <motion.div
-                          className="absolute w-[420px] h-[420px]"
-                          animate={{ rotate: 360 }}
-                          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                        >
-                          {[0, 30, 75, 120, 170, 210, 260, 310].map((angle, i) => (
-                            <div
-                              key={`o1-${i}`}
-                              className="absolute bg-blue-500 rounded-full"
-                              style={{
-                                width: `${6 + (i % 3) * 4}px`,
-                                height: `${6 + (i % 3) * 4}px`,
-                                top: '50%',
-                                left: '50%',
-                                transform: `rotate(${angle}deg) translateX(${195 + (i % 2) * 15}px) translateY(-50%)`,
-                              }}
-                            />
-                          ))}
-                        </motion.div>
-
-                        {/* Orbit Layer 2 - Middle dots (medium speed, counter) */}
-                        <motion.div
-                          className="absolute w-[350px] h-[350px]"
-                          animate={{ rotate: -360 }}
-                          transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-                        >
-                          {[15, 55, 100, 145, 190, 235, 280, 325].map((angle, i) => (
-                            <div
-                              key={`o2-${i}`}
-                              className="absolute bg-blue-500 rounded-full"
-                              style={{
-                                width: `${5 + (i % 4) * 3}px`,
-                                height: `${5 + (i % 4) * 3}px`,
-                                top: '50%',
-                                left: '50%',
-                                transform: `rotate(${angle}deg) translateX(${160 + (i % 3) * 10}px) translateY(-50%)`,
-                              }}
-                            />
-                          ))}
-                        </motion.div>
-
-                        {/* Orbit Layer 3 - Inner ring dots (faster) */}
-                        <motion.div
-                          className="absolute w-[280px] h-[280px]"
-                          animate={{ rotate: 360 }}
-                          transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-                        >
-                          {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
-                            <div
-                              key={`o3-${i}`}
-                              className="absolute bg-blue-500 rounded-full"
-                              style={{
-                                width: `${4 + (i % 2) * 3}px`,
-                                height: `${4 + (i % 2) * 3}px`,
-                                top: '50%',
-                                left: '50%',
-                                transform: `rotate(${angle}deg) translateX(${130 + (i % 2) * 8}px) translateY(-50%)`,
-                              }}
-                            />
-                          ))}
-                        </motion.div>
-
-                        {/* Extra scattered dots at various distances */}
-                        <motion.div
-                          className="absolute w-[400px] h-[400px]"
-                          animate={{ rotate: 360 }}
-                          transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
-                        >
-                          {[20, 70, 140, 200, 250, 300].map((angle, i) => (
-                            <div
-                              key={`scatter-${i}`}
-                              className="absolute bg-blue-500/80 rounded-full"
-                              style={{
-                                width: `${3 + (i % 3) * 2}px`,
-                                height: `${3 + (i % 3) * 2}px`,
-                                top: '50%',
-                                left: '50%',
-                                transform: `rotate(${angle}deg) translateX(${185 + (i % 2) * 20}px) translateY(-50%)`,
-                              }}
-                            />
-                          ))}
-                        </motion.div>
-
-                        {/* Profile image with light blue ring */}
-                        <div className="relative z-10">
-                          <div className="absolute -inset-3 rounded-full bg-gradient-to-br from-blue-200 via-blue-100 to-blue-200 opacity-90" />
+                      <div className="relative flex items-center justify-center">
+                        {/* Simple profile image with subtle ring */}
+                        <div className="relative">
+                          <div className="absolute -inset-3 rounded-full bg-gradient-to-br from-primary/30 via-primary/20 to-primary/30" />
                           <div className="absolute -inset-1 rounded-full bg-background" />
                           <Image
                             src={"/images/profile.jpg"}
-                            width={200}
-                            height={200}
+                            width={220}
+                            height={220}
                             alt="Profile"
                             className="rounded-full relative z-10"
                           />
@@ -691,7 +601,7 @@ portfolio()`}
                                 <div className="text-sm text-muted-foreground">
                                   Arizona State University, Tempe, USA • Aug 2025 - Present
                                 </div>
-                                <p className="text-sm text-muted-foreground">GPA: 3.89/4.0</p>
+                                <p className="text-sm text-muted-foreground">GPA: 4.0/4.0</p>
                               </div>
                             </div>
                             <div className="text-xs text-muted-foreground mt-1">
@@ -726,33 +636,6 @@ portfolio()`}
                             <div className="text-xs text-muted-foreground mt-1">
                               <span className="font-medium text-primary">Relevant Coursework:</span> Data Structures and Algorithms, Database Management Systems (DBMS), Object-Oriented Programming (OOP), Computer Networks, Artificial Intelligence & Machine Learning, Web Development
                             </div>
-                          </motion.li>
-                          <motion.li
-                            className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light transition-all duration-300 hover:translate-x-2 animated-border cursor-hover"
-                            initial={{ opacity: 0, x: -50 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5, delay: 0.3 }}
-                            whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(255, 59, 48, 0.2)" }}
-                          >
-                            <div className="font-semibold">CBSE 12th Board (Physics, Chemistry, Mathematics)</div>
-                            <div className="text-sm text-muted-foreground">
-                              St. Ann's School, Ahmedabad • Apr 2018 - Mar 2020
-                            </div>
-                          </motion.li>
-                          <motion.li
-                            className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light transition-all duration-300 hover:translate-x-2 animated-border cursor-hover"
-                            initial={{ opacity: 0, x: -50 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
-                            whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(255, 59, 48, 0.2)" }}
-                          >
-                            <div className="font-semibold">CBSE 10th Board</div>
-                            <div className="text-sm text-muted-foreground">
-                              Delhi Public School, Bharuch • Apr 2017 - Mar 2018
-                            </div>
-                            <p className="text-sm text-muted-foreground">
-                              Received award for scoring highest marks in English and Mathematics
-                            </p>
                           </motion.li>
                         </ul>
                       </div>
