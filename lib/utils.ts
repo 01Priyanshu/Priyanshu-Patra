@@ -14,7 +14,7 @@ export function getImagePath(path: string) {
   
   // Prepend basePath in production
   const isProd = process.env.NODE_ENV === 'production';
-  const basePath = isProd ? '/Priyanshu-Patra-Portfolio' : '';
+  const basePath = isProd ? '/Priyanshu-Patra' : '';
   
   return `${basePath}${normalizedPath}`;
 }

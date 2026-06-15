@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Priyanshu Patra | Data Science & ML Engineer",
     description: "Portfolio of Priyanshu Patra — Data Science & Machine Learning Engineer.",
-    url: "https://01priyanshu.github.io/Priyanshu-Patra-Portfolio",
+    url: "https://01priyanshu.github.io/Priyanshu-Patra",
     siteName: "Priyanshu Patra Portfolio",
     type: "website",
   },
