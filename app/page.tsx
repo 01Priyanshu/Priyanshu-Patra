@@ -102,6 +102,26 @@ export default function Home() {
   // Sample project data
   const projects = [
     {
+      title: "MA Rank - Multi Agent Resume Screening System",
+      description:
+        "Built a multi-agent LLM pipeline using LangGraph with 5 specialized agents stored in a Neo4j knowledge graph. Developed a composite scoring algorithm (Precision@10: 0.80) and deployed a recruiter-facing Streamlit dashboard for real-time candidate ranking.",
+      image: "/images/ma-rank.png",
+      tags: ["Python", "LangGraph", "Neo4j", "NLP", "Streamlit"],
+      category: "nlp",
+      github: "https://github.com/01Priyanshu",
+      demo: "https://github.com/01Priyanshu",
+    },
+    {
+      title: "Urban vs Rural Energy Intensity Analysis",
+      description:
+        "Merged NREL and USDA datasets to engineer an Energy Intensity Index across Arizona. Built OLS regression models identifying transportation fuel as the dominant driver and generated choropleth maps for actionable EV policy recommendations.",
+      image: "/images/energy-intensity.png",
+      tags: ["Python", "Pandas", "GeoPandas", "Matplotlib"],
+      category: "viz",
+      github: "https://github.com/01Priyanshu",
+      demo: "https://github.com/01Priyanshu",
+    },
+    {
       title: "AI-Powered Resume Screening System",
       description:
         "Built an AI-powered resume screening system to automate and rank job applicants based on predefined criteria, improving processing efficiency by 20%.",
