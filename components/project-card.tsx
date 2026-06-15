@@ -21,6 +21,8 @@ interface ProjectCardProps {
   }
 }
 
+import { getImagePath } from "@/lib/utils"
+
 export default function ProjectCard({ project }: ProjectCardProps) {
   const cardRef = useRef<HTMLDivElement>(null)
   const mouseX = useMotionValue(0)
@@ -74,7 +76,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-400 z-10" />
           <Image
-            src={project.image || "/placeholder.svg"}
+            src={getImagePath(project.image || "/placeholder.svg")}
             alt={project.title}
             width={400}
             height={300}

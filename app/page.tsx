@@ -40,6 +40,7 @@ import ColorTransition from "@/components/color-transition"
 import ParticlesBackground from "@/components/particles-background"
 // Update the import section to include the ResumePreview component
 import ProjectCard from "@/components/project-card"
+import { getImagePath } from "@/lib/utils"
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("about")
@@ -462,7 +463,7 @@ export default function Home() {
                           <div className="absolute -inset-3 rounded-full bg-gradient-to-br from-primary/30 via-primary/20 to-primary/30" />
                           <div className="absolute -inset-1 rounded-full bg-background" />
                           <Image
-                            src={"/images/profile.jpg"}
+                            src={getImagePath("/images/profile.jpg")}
                             width={220}
                             height={220}
                             alt="Profile"
@@ -596,7 +597,7 @@ portfolio()`}
                           >
                             <div className="flex items-center gap-3">
                               <Image
-                                src="/images/asu-logo.png"
+                                src={getImagePath("/images/asu-logo.png")}
                                 alt="Arizona State University"
                                 width={50}
                                 height={50}
@@ -625,7 +626,7 @@ portfolio()`}
                           >
                             <div className="flex items-center gap-3">
                               <Image
-                                src="/images/srm-logo.png"
+                                src={getImagePath("/images/srm-logo.png")}
                                 alt="SRM Institute of Science and Technology"
                                 width={50}
                                 height={50}

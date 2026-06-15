@@ -14,6 +14,8 @@ interface CertificatePreviewProps {
   description?: string
 }
 
+import { getImagePath } from "@/lib/utils"
+
 export default function CertificatePreview({ title, imagePath, issuer, date, description }: CertificatePreviewProps) {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -60,7 +62,7 @@ export default function CertificatePreview({ title, imagePath, issuer, date, des
             </div>
           )}
           <div className="relative w-full h-[500px] border border-primary/10 rounded-lg overflow-hidden bg-white">
-            <Image src={imagePath || "/placeholder.svg"} alt={title} fill className="object-contain" priority />
+            <Image src={getImagePath(imagePath || "/placeholder.svg")} alt={title} fill className="object-contain" priority />
           </div>
         </div>
       </DialogContent>
