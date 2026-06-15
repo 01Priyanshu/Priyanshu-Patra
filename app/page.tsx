@@ -451,14 +451,14 @@ export default function Home() {
                             asChild
                             className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 glow-on-hover liquid-button"
                           >
-                            <Link
-                              href="/Priyanshu_Patra_Resume.pdf"
+                            <a
+                              href={getImagePath("/Priyanshu_Patra_Resume.pdf")}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
                               <Download className="mr-2 h-4 w-4" />
                               Download CV
-                            </Link>
+                            </a>
                           </Button>
                           <Button
                             onClick={() => handleSectionChange("contact")}
