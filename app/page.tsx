@@ -37,6 +37,7 @@ import CodeEditor from "@/components/code-editor"
 
 import SectionTransition from "@/components/section-transition"
 import ColorTransition from "@/components/color-transition"
+import ParticlesBackground from "@/components/particles-background"
 // Update the import section to include the ResumePreview component
 import ProjectCard from "@/components/project-card"
 
@@ -186,17 +187,24 @@ export default function Home() {
       {/* Color Transition Background */}
       <ColorTransition colors={backgroundColors} duration={20} />
 
+      {/* Particles Background */}
+      <ParticlesBackground />
+
       {/* Background Elements */}
       <div className="fixed inset-0 z-0 overflow-hidden">
+        {/* Aurora glow blobs */}
+        <div className="aurora-glow" style={{ background: "hsl(0, 84%, 62%)", top: "10%", left: "15%" }} />
+        <div className="aurora-glow" style={{ background: "hsl(270, 80%, 60%)", top: "60%", right: "10%", animationDelay: "3s" }} />
+        <div className="aurora-glow" style={{ background: "hsl(25, 95%, 55%)", bottom: "20%", left: "40%", animationDelay: "6s" }} />
         <motion.div
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0 opacity-8"
           style={{
-            backgroundImage: "radial-gradient(circle, rgba(255,59,48,0.2) 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(circle, rgba(255,59,48,0.15) 1px, transparent 1px)",
             backgroundSize: "30px 30px",
           }}
           animate={{
-            scale: [1, 1.1, 1],
-            rotate: [0, 5, 0],
+            scale: [1, 1.08, 1],
+            rotate: [0, 3, 0],
           }}
           transition={{
             duration: 20,
@@ -208,7 +216,7 @@ export default function Home() {
           className="absolute inset-0 opacity-5"
           style={{
             backgroundImage:
-              "linear-gradient(to right, rgba(255,59,48,0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,59,48,0.1) 1px, transparent 1px)",
+              "linear-gradient(to right, rgba(255,59,48,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,59,48,0.08) 1px, transparent 1px)",
             backgroundSize: "50px 50px",
           }}
           animate={{
@@ -223,7 +231,7 @@ export default function Home() {
         />
       </div>
 
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60 shadow-lg shadow-black/20">
         <div className="container flex h-16 items-center justify-between">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
             <Link href="/" className="flex items-center gap-2 font-bold text-xl group cursor-hover">
