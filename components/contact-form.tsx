@@ -31,7 +31,7 @@ export default function ContactForm() {
 
     try {
       // Send email using a service like EmailJS or a custom API endpoint
-      const response = await fetch("https://formsubmit.co/ajax/priyanshupatra22072002@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/patrapriyanshu22@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -63,7 +63,7 @@ export default function ContactForm() {
     } catch (error) {
       toast({
         title: "Error sending message",
-        description: "Please try again or contact me directly at priyanshupatra22072002@gmail.com",
+        description: "Please try again or contact me directly at patrapriyanshu22@gmail.com",
         variant: "destructive",
       })
     } finally {
