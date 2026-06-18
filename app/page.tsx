@@ -1488,7 +1488,7 @@ portfolio()`}
                             whileHover={{ x: 10, backgroundColor: "rgba(255, 59, 48, 0.15)" }}
                           >
                             <Mail className="h-5 w-5 text-primary" />
-                            <span className="code-font">priyanshupatra22072202@gmail.com</span>
+                            <span className="code-font">patrapriyanshu22@gmail.com</span>
                           </motion.div>
                           <motion.div
                             className="flex items-center gap-3 transition-all duration-300 hover:translate-x-2 p-2 rounded-lg bg-primary/5 hover-light cursor-hover"
@@ -1653,7 +1653,7 @@ portfolio()`}
                         </motion.div>
                         <motion.div whileHover={{ scale: 1.2, rotate: 5 }} whileTap={{ scale: 0.9 }}>
                           <Link
-                            href="mailto:priyanshupatra22072202@gmail.com"
+                            href="mailto:patrapriyanshu22@gmail.com"
                             className="transition-transform hover:scale-125 cursor-hover"
                           >
                             <Mail className="h-5 w-5 hover:text-primary transition-colors" />
