@@ -435,7 +435,7 @@ export default function Home() {
                           animate={{ opacity: 1 }}
                           transition={{ duration: 0.8, delay: 0.4 }}
                         >
-                          Data Science & Machine Learning Engineer
+                          Data Analyst | Data Science & Machine Learning Engineer
                         </motion.p>
                       </div>
                       <motion.div
@@ -444,7 +444,7 @@ export default function Home() {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
                       >
-                        <TypingAnimation text="Data Science Engineer with hands-on experience in AI-powered solutions and data analytics. Proficient in Python, SQL, TensorFlow, and machine learning frameworks." />
+                        <TypingAnimation text="Data Analyst & Data Science Engineer with hands-on experience in data analytics and AI-powered solutions. Proficient in Python, SQL, TensorFlow, and machine learning frameworks." />
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-6">
                           <Button
@@ -511,7 +511,7 @@ export default function Home() {
                       <div className="space-y-2 text-center">
                         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gradient">About Me</h2>
                         <p className="text-muted-foreground md:text-lg">
-                          I'm a data science engineering student passionate about extracting meaningful insights from
+                          I'm a Data Analyst & Data Science Engineer passionate about extracting meaningful insights from
                           complex datasets. With a strong foundation in statistics, programming, and machine learning, I
                           aim to solve real-world problems through data-driven approaches.
                         </p>
