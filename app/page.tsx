@@ -108,8 +108,8 @@ export default function Home() {
       image: "/images/helpmate-chatbot.png",
       tags: ["Python", "Google Gemini API", "Flask", "Pandas", "SQLite", "Matplotlib"],
       category: "ai",
-      github: "https://github.com/01Priyanshu",
-      demo: "https://github.com/01Priyanshu",
+      github: "https://github.com/01Priyanshu/ai-data-analyst-agent",
+      demo: "https://ai-data-analyst-agent-378676488889.us-east1.run.app/",
     },
     {
       title: "WeatherVibe — Live Weather Dashboard",
