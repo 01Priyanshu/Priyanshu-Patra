@@ -102,6 +102,26 @@ export default function Home() {
   // Sample project data
   const projects = [
     {
+      title: "AI Data Analyst Agent",
+      description:
+        "Built and deployed an AI-powered data analysis agent that converts natural language questions into SQL queries, auto-generates visualizations, and delivers actionable business insights from any CSV dataset. Deployed on Google Cloud Run.",
+      image: "/images/helpmate-chatbot.png",
+      tags: ["Python", "Google Gemini API", "Flask", "Pandas", "SQLite", "Matplotlib"],
+      category: "ai",
+      github: "https://github.com/01Priyanshu",
+      demo: "https://github.com/01Priyanshu",
+    },
+    {
+      title: "WeatherVibe — Live Weather Dashboard",
+      description:
+        "Designed and deployed a real-time weather dashboard featuring city search, 7-day forecast, UV index tracking, and animated glassmorphism UI. Deployed on Google Cloud Run.",
+      image: "/images/energy-intensity.png",
+      tags: ["HTML", "CSS", "JavaScript", "Open-Meteo API"],
+      category: "data",
+      github: "https://github.com/01Priyanshu",
+      demo: "https://github.com/01Priyanshu",
+    },
+    {
       title: "E-Commerce Sales Dashboard",
       description:
         "Power BI dashboard analyzing e-commerce sales performance by state, category, payment mode, and monthly profit trends. Built with DAX measures and interactive slicers.",
