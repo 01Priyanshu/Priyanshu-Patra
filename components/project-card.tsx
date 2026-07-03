@@ -70,7 +70,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {/* Category indicator */}
           <div className="absolute top-3 left-3 z-20">
             <span className="px-2 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-black/60 backdrop-blur-sm text-primary border border-primary/30">
-              {project.category === "ml" ? "ML" : project.category === "nlp" ? "NLP" : "Data Viz"}
+              {project.category === "data" ? "DATA" : project.category === "ai" ? "AI" : project.category}
             </span>
           </div>
 
