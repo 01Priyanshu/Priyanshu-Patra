@@ -108,8 +108,8 @@ export default function Home() {
       image: "/images/ecommerce-recommendation.jpg",
       tags: ["Power BI", "DAX"],
       category: "data",
-      github: "https://github.com/01Priyanshu",
-      demo: "https://github.com/01Priyanshu",
+      github: "https://github.com/01Priyanshu/Ecommerce-sales-analysis",
+      demo: "https://github.com/01Priyanshu/Ecommerce-sales-analysis",
     },
     {
       title: "Call Centre Performance Dashboard",
@@ -118,8 +118,8 @@ export default function Home() {
       image: "/images/energy-intensity.png",
       tags: ["Excel", "Power Pivot", "DAX"],
       category: "data",
-      github: "https://github.com/01Priyanshu",
-      demo: "https://github.com/01Priyanshu",
+      github: "https://github.com/01Priyanshu/CallCentre_Performance_Dashboard",
+      demo: "https://github.com/01Priyanshu/CallCentre_Performance_Dashboard",
     },
     {
       title: "British Airways Reviews Dashboard",
@@ -128,8 +128,8 @@ export default function Home() {
       image: "/images/wine-quality.png",
       tags: ["Tableau"],
       category: "data",
-      github: "https://github.com/01Priyanshu",
-      demo: "https://github.com/01Priyanshu",
+      github: "https://github.com/01Priyanshu/british-airways-reviews-tableau",
+      demo: "https://github.com/01Priyanshu/british-airways-reviews-tableau",
     },
     {
       title: "Closing the Gap — Food Insecurity Dashboard",
@@ -138,8 +138,8 @@ export default function Home() {
       image: "/images/finance-tracker.png",
       tags: ["Excel", "Pivot Tables"],
       category: "data",
-      github: "https://github.com/01Priyanshu",
-      demo: "https://github.com/01Priyanshu",
+      github: "https://github.com/01Priyanshu/CAFB-food-insecurity-dashboard",
+      demo: "https://github.com/01Priyanshu/CAFB-food-insecurity-dashboard",
     },
     {
       title: "MA Rank - Multi Agent Resume Screening System",
