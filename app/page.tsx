@@ -148,8 +148,8 @@ export default function Home() {
       image: "/images/ma-rank.png",
       tags: ["Python", "LangGraph", "Neo4j", "NLP", "Streamlit"],
       category: "ai",
-      github: "https://github.com/01Priyanshu",
-      demo: "https://github.com/01Priyanshu",
+      github: "https://github.com/01Priyanshu/MA-Rank-Multi-Agent-Resume-Screening-and-Skill-Mining-System",
+      demo: "https://ma-rank.streamlit.app/",
     },
     {
       title: "Urban vs Rural Energy Intensity Analysis",
@@ -158,8 +158,8 @@ export default function Home() {
       image: "/images/energy-intensity.png",
       tags: ["Python", "Pandas", "GeoPandas", "Matplotlib"],
       category: "data",
-      github: "https://github.com/01Priyanshu",
-      demo: "https://github.com/01Priyanshu",
+      github: "https://github.com/01Priyanshu/Urban-vs.-Rural-Energy-Intensity-and-Efficiency",
+      demo: "https://colab.research.google.com/drive/1TmBxNbwtYn8BBB0CGc_fwYx-E64ULyeK?usp=sharing",
     },
     {
       title: "AI-Powered Resume Screening System",
