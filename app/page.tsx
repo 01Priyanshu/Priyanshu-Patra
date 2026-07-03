@@ -102,12 +102,52 @@ export default function Home() {
   // Sample project data
   const projects = [
     {
+      title: "E-Commerce Sales Dashboard",
+      description:
+        "Power BI dashboard analyzing e-commerce sales performance by state, category, payment mode, and monthly profit trends. Built with DAX measures and interactive slicers.",
+      image: "/images/ecommerce-recommendation.jpg",
+      tags: ["Power BI", "DAX"],
+      category: "data",
+      github: "https://github.com/01Priyanshu",
+      demo: "https://github.com/01Priyanshu",
+    },
+    {
+      title: "Call Centre Performance Dashboard",
+      description:
+        "Excel dashboard tracking call centre KPIs (call volume, avg handle time, customer satisfaction, agent performance) using a Power Pivot data model and DAX measures across 4 sheets.",
+      image: "/images/energy-intensity.png",
+      tags: ["Excel", "Power Pivot", "DAX"],
+      category: "data",
+      github: "https://github.com/01Priyanshu",
+      demo: "https://github.com/01Priyanshu",
+    },
+    {
+      title: "British Airways Reviews Dashboard",
+      description:
+        "Tableau dashboard analyzing 1,300+ customer reviews, covering ratings, aircraft type, country, and monthly trends, with interactive filters.",
+      image: "/images/wine-quality.png",
+      tags: ["Tableau"],
+      category: "data",
+      github: "https://github.com/01Priyanshu",
+      demo: "https://github.com/01Priyanshu",
+    },
+    {
+      title: "Closing the Gap — Food Insecurity Dashboard",
+      description:
+        "Excel dashboard analyzing food insecurity and food bank coverage gaps across DC, Maryland, and Virginia (2014–2015) using PivotTables and a filled map.",
+      image: "/images/finance-tracker.png",
+      tags: ["Excel", "Pivot Tables"],
+      category: "data",
+      github: "https://github.com/01Priyanshu",
+      demo: "https://github.com/01Priyanshu",
+    },
+    {
       title: "MA Rank - Multi Agent Resume Screening System",
       description:
         "Built a multi-agent LLM pipeline using LangGraph with 5 specialized agents stored in a Neo4j knowledge graph. Developed a composite scoring algorithm (Precision@10: 0.80) and deployed a recruiter-facing Streamlit dashboard for real-time candidate ranking.",
       image: "/images/ma-rank.png",
       tags: ["Python", "LangGraph", "Neo4j", "NLP", "Streamlit"],
-      category: "nlp",
+      category: "ai",
       github: "https://github.com/01Priyanshu",
       demo: "https://github.com/01Priyanshu",
     },
@@ -117,7 +157,7 @@ export default function Home() {
         "Merged NREL and USDA datasets to engineer an Energy Intensity Index across Arizona. Built OLS regression models identifying transportation fuel as the dominant driver and generated choropleth maps for actionable EV policy recommendations.",
       image: "/images/energy-intensity.png",
       tags: ["Python", "Pandas", "GeoPandas", "Matplotlib"],
-      category: "viz",
+      category: "data",
       github: "https://github.com/01Priyanshu",
       demo: "https://github.com/01Priyanshu",
     },
@@ -127,7 +167,7 @@ export default function Home() {
         "Built an AI-powered resume screening system to automate and rank job applicants based on predefined criteria, improving processing efficiency by 20%.",
       image: "/images/resume-screening.png",
       tags: ["Machine Learning", "Python", "NLP", "AI"],
-      category: "ml",
+      category: "ai",
       github: "https://github.com/01Priyanshu/AI-Resume-Screening-and-Ranking-System",
       demo: "https://ai-resume-screening-omega.vercel.app/",
     },
@@ -137,7 +177,7 @@ export default function Home() {
         "Developed a personalized diet recommendation system using machine learning algorithms to analyze user health profiles and dietary preferences.",
       image: "/images/diet-recommendation.png",
       tags: ["Machine Learning", "Python", "Data Analysis"],
-      category: "ml",
+      category: "ai",
       github: "https://github.com",
       demo: "https://example.com",
     },
@@ -147,7 +187,7 @@ export default function Home() {
         "Developed an AI-driven chatbot providing health assistance and personalized wellness recommendations using NLP techniques.",
       image: "/images/helpmate-chatbot.png",
       tags: ["NLP", "AI", "Python", "Chatbot"],
-      category: "nlp",
+      category: "ai",
       github: "https://github.com/01Priyanshu/Helpmate-Chatbot",
       demo: "https://helpmate-chatbot.netlify.app/",
     },
@@ -157,7 +197,7 @@ export default function Home() {
         "Developed a full-stack web application to track and analyze personal finances using Python, MySQL, and JavaScript.",
       image: "/images/finance-tracker.png",
       tags: ["MERN Stack", "Web Development", "Financial Data"],
-      category: "viz",
+      category: "data",
       github: "https://github.com/01Priyanshu/Finance-Tracker-A-Smart-Personal-Finance-Management-System",
       demo: "https://finance-tracker-dev.vercel.app/",
     },
@@ -167,7 +207,7 @@ export default function Home() {
         "Designed a system to detect allergens from food labels using OCR and provide safe alternative recommendations.",
       image: "/images/food-allergen.png",
       tags: ["OCR", "Python", "Image Processing", "AI"],
-      category: "viz",
+      category: "ai",
       github: "https://github.com",
       demo: "https://example.com",
     },
@@ -177,7 +217,7 @@ export default function Home() {
         "Performed exploratory data analysis to identify key factors affecting wine quality from chemical properties.",
       image: "/images/wine-quality.png",
       tags: ["Data Analysis", "Machine Learning", "Python", "EDA"],
-      category: "ml",
+      category: "data",
       github: "https://github.com",
       demo: "https://example.com",
     },
@@ -187,7 +227,7 @@ export default function Home() {
         "Built an end-to-end ML-powered e-commerce analytics and recommendation system, including automated ETL pipelines, customer insights, and real-time prediction APIs.",
       image: "/images/ecommerce-recommendation.jpg",
       tags: ["Machine Learning", "ETL", "Python", "Recommendation Systems"],
-      category: "ml",
+      category: "data",
       github: "https://github.com",
       demo: "https://example.com",
     },
@@ -1125,7 +1165,7 @@ portfolio()`}
                           <div className="space-y-2 progress-bar-animated">
                             <div className="flex items-center justify-between">
                               <span className="text-sm font-medium code-font flex items-center">
-                                <span className="text-primary mr-2">&gt;</span> Data Visualization
+                                <span className="text-primary mr-2">&gt;</span> Power BI / Tableau
                               </span>
                               <span className="text-sm text-muted-foreground">85%</span>
                             </div>
@@ -1289,15 +1329,15 @@ portfolio()`}
                           <div className="space-y-2 progress-bar-animated">
                             <div className="flex items-center justify-between">
                               <span className="text-sm font-medium code-font flex items-center">
-                                <span className="text-primary mr-2">&gt;</span> MATLAB
+                                <span className="text-primary mr-2">&gt;</span> Excel / DAX / Power Pivot
                               </span>
-                              <span className="text-sm text-muted-foreground">75%</span>
+                              <span className="text-sm text-muted-foreground">90%</span>
                             </div>
                             <div className="h-2 w-full bg-secondary/10 rounded-full overflow-hidden">
                               <motion.div
                                 className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full"
                                 initial={{ width: 0 }}
-                                animate={{ width: "75%" }}
+                                animate={{ width: "90%" }}
                                 transition={{ duration: 1, delay: 0.6 }}
                               ></motion.div>
                             </div>
@@ -1338,53 +1378,31 @@ portfolio()`}
                       </motion.p>
                     </div>
                   </div>
-                  <Tabs defaultValue="all" className="mt-12">
-                    <div className="flex justify-center">
-                      <TabsList className="bg-primary/10 p-1">
-                        <TabsTrigger
-                          value="all"
-                          className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground cursor-hover"
-                        >
-                          All
-                        </TabsTrigger>
-                        <TabsTrigger
-                          value="ml"
-                          className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground cursor-hover"
-                        >
-                          Machine Learning
-                        </TabsTrigger>
-                        <TabsTrigger
-                          value="viz"
-                          className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground cursor-hover"
-                        >
-                          Data Visualization
-                        </TabsTrigger>
-                        <TabsTrigger
-                          value="nlp"
-                          className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground cursor-hover"
-                        >
-                          NLP
-                        </TabsTrigger>
-                      </TabsList>
+                  <div className="mt-12 space-y-16">
+                    {/* Data Analyst / Data Science Projects */}
+                    <div className="space-y-6">
+                      <h3 className="text-2xl font-bold border-b border-primary/20 pb-2 text-primary inline-block">Data Analyst / Data Science</h3>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-4">
+                        {projects
+                          .filter((p) => p.category === "data")
+                          .map((project, index) => (
+                            <motion.div
+                              key={index}
+                              initial={{ opacity: 0, y: 20 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.5, delay: index * 0.1 }}
+                            >
+                              <ProjectCard project={project} />
+                            </motion.div>
+                          ))}
+                      </div>
                     </div>
-                    <TabsContent value="all" className="mt-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-4">
-                        {projects.map((project, index) => (
-                          <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                          >
-                            <ProjectCard project={project} />
-                          </motion.div>
-                        ))}
-                      </div>
-                    </TabsContent>
-                    <TabsContent value="ml" className="mt-6">
+                    {/* AI / Agentic Projects */}
+                    <div className="space-y-6">
+                      <h3 className="text-2xl font-bold border-b border-primary/20 pb-2 text-primary inline-block">AI & Agentic Systems</h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-4">
                         {projects
-                          .filter((p) => p.category === "ml")
+                          .filter((p) => p.category === "ai")
                           .map((project, index) => (
                             <motion.div
                               key={index}
@@ -1396,40 +1414,8 @@ portfolio()`}
                             </motion.div>
                           ))}
                       </div>
-                    </TabsContent>
-                    <TabsContent value="viz" className="mt-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-4">
-                        {projects
-                          .filter((p) => p.category === "viz")
-                          .map((project, index) => (
-                            <motion.div
-                              key={index}
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ duration: 0.5, delay: index * 0.1 }}
-                            >
-                              <ProjectCard project={project} />
-                            </motion.div>
-                          ))}
-                      </div>
-                    </TabsContent>
-                    <TabsContent value="nlp" className="mt-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-4">
-                        {projects
-                          .filter((p) => p.category === "nlp")
-                          .map((project, index) => (
-                            <motion.div
-                              key={index}
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ duration: 0.5, delay: index * 0.1 }}
-                            >
-                              <ProjectCard project={project} />
-                            </motion.div>
-                          ))}
-                      </div>
-                    </TabsContent>
-                  </Tabs>
+                    </div>
+                  </div>
                 </div>
               </section>
             </div>
