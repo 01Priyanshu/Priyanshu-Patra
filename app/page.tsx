@@ -101,26 +101,7 @@ export default function Home() {
 
   // Sample project data
   const projects = [
-    {
-      title: "AI Data Analyst Agent",
-      description:
-        "Built and deployed an AI-powered data analysis agent that converts natural language questions into SQL queries, auto-generates visualizations, and delivers actionable business insights from any CSV dataset. Deployed on Google Cloud Run.",
-      image: "/images/helpmate-chatbot.png",
-      tags: ["Python", "Google Gemini API", "Flask", "Pandas", "SQLite", "Matplotlib"],
-      category: "ai",
-      github: "https://github.com/01Priyanshu/ai-data-analyst-agent",
-      demo: "https://ai-data-analyst-agent-378676488889.us-east1.run.app/",
-    },
-    {
-      title: "WeatherVibe — Live Weather Dashboard",
-      description:
-        "Designed and deployed a real-time weather dashboard featuring city search, 7-day forecast, UV index tracking, and animated glassmorphism UI. Deployed on Google Cloud Run.",
-      image: "/images/energy-intensity.png",
-      tags: ["HTML", "CSS", "JavaScript", "Open-Meteo API"],
-      category: "data",
-      github: "https://github.com/01Priyanshu",
-      demo: "https://github.com/01Priyanshu",
-    },
+    // ===== DATA ANALYST / DATA SCIENCE PROJECTS =====
     {
       title: "E-Commerce Sales Dashboard",
       description:
@@ -162,14 +143,14 @@ export default function Home() {
       demo: "https://github.com/01Priyanshu/CAFB-food-insecurity-dashboard",
     },
     {
-      title: "MA Rank - Multi Agent Resume Screening System",
+      title: "WeatherVibe — Live Weather Dashboard",
       description:
-        "Built a multi-agent LLM pipeline using LangGraph with 5 specialized agents stored in a Neo4j knowledge graph. Developed a composite scoring algorithm (Precision@10: 0.80) and deployed a recruiter-facing Streamlit dashboard for real-time candidate ranking.",
-      image: "/images/ma-rank.png",
-      tags: ["Python", "LangGraph", "Neo4j", "NLP", "Streamlit"],
-      category: "ai",
-      github: "https://github.com/01Priyanshu/MA-Rank-Multi-Agent-Resume-Screening-and-Skill-Mining-System",
-      demo: "https://ma-rank.streamlit.app/",
+        "Designed and deployed a real-time weather dashboard featuring city search, 7-day forecast, UV index tracking, and animated glassmorphism UI. Deployed on Google Cloud Run.",
+      image: "/images/energy-intensity.png",
+      tags: ["HTML", "CSS", "JavaScript", "Open-Meteo API"],
+      category: "data",
+      github: "https://github.com/01Priyanshu",
+      demo: "https://github.com/01Priyanshu",
     },
     {
       title: "Urban vs Rural Energy Intensity Analysis",
@@ -182,36 +163,6 @@ export default function Home() {
       demo: "https://colab.research.google.com/drive/1TmBxNbwtYn8BBB0CGc_fwYx-E64ULyeK?usp=sharing",
     },
     {
-      title: "AI-Powered Resume Screening System",
-      description:
-        "Built an AI-powered resume screening system to automate and rank job applicants based on predefined criteria, improving processing efficiency by 20%.",
-      image: "/images/resume-screening.png",
-      tags: ["Machine Learning", "Python", "NLP", "AI"],
-      category: "ai",
-      github: "https://github.com/01Priyanshu/AI-Resume-Screening-and-Ranking-System",
-      demo: "https://ai-resume-screening-omega.vercel.app/",
-    },
-    {
-      title: "Diet Recommendation System",
-      description:
-        "Developed a personalized diet recommendation system using machine learning algorithms to analyze user health profiles and dietary preferences.",
-      image: "/images/diet-recommendation.png",
-      tags: ["Machine Learning", "Python", "Data Analysis"],
-      category: "ai",
-      github: "https://github.com",
-      demo: "https://example.com",
-    },
-    {
-      title: "Helpmate - Wellness Health Chatbot",
-      description:
-        "Developed an AI-driven chatbot providing health assistance and personalized wellness recommendations using NLP techniques.",
-      image: "/images/helpmate-chatbot.png",
-      tags: ["NLP", "AI", "Python", "Chatbot"],
-      category: "ai",
-      github: "https://github.com/01Priyanshu/Helpmate-Chatbot",
-      demo: "https://helpmate-chatbot.netlify.app/",
-    },
-    {
       title: "Finance Tracker",
       description:
         "Developed a full-stack web application to track and analyze personal finances using Python, MySQL, and JavaScript.",
@@ -220,16 +171,6 @@ export default function Home() {
       category: "data",
       github: "https://github.com/01Priyanshu/Finance-Tracker-A-Smart-Personal-Finance-Management-System",
       demo: "https://finance-tracker-dev.vercel.app/",
-    },
-    {
-      title: "OCR Based Food Allergen Detection and Recommendation System",
-      description:
-        "Designed a system to detect allergens from food labels using OCR and provide safe alternative recommendations.",
-      image: "/images/food-allergen.png",
-      tags: ["OCR", "Python", "Image Processing", "AI"],
-      category: "ai",
-      github: "https://github.com",
-      demo: "https://example.com",
     },
     {
       title: "Wine Quality Analysis",
@@ -248,6 +189,67 @@ export default function Home() {
       image: "/images/ecommerce-recommendation.jpg",
       tags: ["Machine Learning", "ETL", "Python", "Recommendation Systems"],
       category: "data",
+      github: "https://github.com",
+      demo: "https://example.com",
+    },
+    // ===== AI & AGENTIC SYSTEMS PROJECTS =====
+    {
+      title: "AI Data Analyst Agent",
+      description:
+        "Built and deployed an AI-powered data analysis agent that converts natural language questions into SQL queries, auto-generates visualizations, and delivers actionable business insights from any CSV dataset. Deployed on Google Cloud Run.",
+      image: "/images/helpmate-chatbot.png",
+      tags: ["Python", "Google Gemini API", "Flask", "Pandas", "SQLite", "Matplotlib"],
+      category: "ai",
+      github: "https://github.com/01Priyanshu/ai-data-analyst-agent",
+      demo: "https://ai-data-analyst-agent-378676488889.us-east1.run.app/",
+    },
+    {
+      title: "MA Rank - Multi Agent Resume Screening System",
+      description:
+        "Built a multi-agent LLM pipeline using LangGraph with 5 specialized agents stored in a Neo4j knowledge graph. Developed a composite scoring algorithm (Precision@10: 0.80) and deployed a recruiter-facing Streamlit dashboard for real-time candidate ranking.",
+      image: "/images/ma-rank.png",
+      tags: ["Python", "LangGraph", "Neo4j", "NLP", "Streamlit"],
+      category: "ai",
+      github: "https://github.com/01Priyanshu/MA-Rank-Multi-Agent-Resume-Screening-and-Skill-Mining-System",
+      demo: "https://ma-rank.streamlit.app/",
+    },
+    {
+      title: "AI-Powered Resume Screening System",
+      description:
+        "Built an AI-powered resume screening system to automate and rank job applicants based on predefined criteria, improving processing efficiency by 20%.",
+      image: "/images/resume-screening.png",
+      tags: ["Machine Learning", "Python", "NLP", "AI"],
+      category: "ai",
+      github: "https://github.com/01Priyanshu/AI-Resume-Screening-and-Ranking-System",
+      demo: "https://ai-resume-screening-omega.vercel.app/",
+    },
+    {
+      title: "Helpmate - Wellness Health Chatbot",
+      description:
+        "Developed an AI-driven chatbot providing health assistance and personalized wellness recommendations using NLP techniques.",
+      image: "/images/helpmate-chatbot.png",
+      tags: ["NLP", "AI", "Python", "Chatbot"],
+      category: "ai",
+      github: "https://github.com/01Priyanshu/Helpmate-Chatbot",
+      demo: "https://helpmate-chatbot.netlify.app/",
+    },
+    {
+      title: "Diet Recommendation System",
+      description:
+        "Developed a personalized diet recommendation system using machine learning algorithms to analyze user health profiles and dietary preferences.",
+      image: "/images/diet-recommendation.png",
+      tags: ["Machine Learning", "Python", "Data Analysis"],
+      category: "ai",
+      github: "https://github.com",
+      demo: "https://example.com",
+    },
+    {
+      title: "OCR Based Food Allergen Detection and Recommendation System",
+      description:
+        "Designed a system to detect allergens from food labels using OCR and provide safe alternative recommendations.",
+      image: "/images/food-allergen.png",
+      tags: ["OCR", "Python", "Image Processing", "AI"],
+      category: "ai",
       github: "https://github.com",
       demo: "https://example.com",
     },
