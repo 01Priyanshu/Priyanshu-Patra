@@ -110,7 +110,7 @@ export default function Home() {
       title: "E-Commerce Sales Dashboard",
       description:
         "Power BI dashboard analyzing e-commerce sales performance by state, category, payment mode, and monthly profit trends. Built with DAX measures and interactive slicers.",
-      image: "/images/ecommerce-recommendation.jpg",
+      image: "/images/ecommerce-sales-dashboard.png",
       tags: ["Power BI", "DAX"],
       category: "data",
       github: "https://github.com/01Priyanshu/Ecommerce-sales-analysis",
@@ -120,7 +120,7 @@ export default function Home() {
       title: "Call Centre Performance Dashboard",
       description:
         "Excel dashboard tracking call centre KPIs (call volume, avg handle time, customer satisfaction, agent performance) using a Power Pivot data model and DAX measures across 4 sheets.",
-      image: "/images/energy-intensity.png",
+      image: "/images/call-centre-dashboard.png",
       tags: ["Excel", "Power Pivot", "DAX"],
       category: "data",
       github: "https://github.com/01Priyanshu/CallCentre_Performance_Dashboard",
@@ -130,7 +130,7 @@ export default function Home() {
       title: "British Airways Reviews Dashboard",
       description:
         "Tableau dashboard analyzing 1,300+ customer reviews, covering ratings, aircraft type, country, and monthly trends, with interactive filters.",
-      image: "/images/wine-quality.png",
+      image: "/images/british-airways-dashboard.png",
       tags: ["Tableau"],
       category: "data",
       github: "https://github.com/01Priyanshu/british-airways-reviews-tableau",
@@ -140,7 +140,7 @@ export default function Home() {
       title: "Closing the Gap — Food Insecurity Dashboard",
       description:
         "Excel dashboard analyzing food insecurity and food bank coverage gaps across DC, Maryland, and Virginia (2014–2015) using PivotTables and a filled map.",
-      image: "/images/finance-tracker.png",
+      image: "/images/food-insecurity-dashboard.png",
       tags: ["Excel", "Pivot Tables"],
       category: "data",
       github: "https://github.com/01Priyanshu/CAFB-food-insecurity-dashboard",
@@ -150,7 +150,7 @@ export default function Home() {
       title: "WeatherVibe — Live Weather Dashboard",
       description:
         "Designed and deployed a real-time weather dashboard featuring city search, 7-day forecast, UV index tracking, and animated glassmorphism UI. Deployed on Google Cloud Run.",
-      image: "/images/energy-intensity.png",
+      image: "/images/weathervibe.jpg",
       tags: ["HTML", "CSS", "JavaScript", "Open-Meteo API"],
       category: "data",
       github: "https://github.com/01Priyanshu",
@@ -201,7 +201,7 @@ export default function Home() {
       title: "AI Data Analyst Agent",
       description:
         "Built and deployed an AI-powered data analysis agent that converts natural language questions into SQL queries, auto-generates visualizations, and delivers actionable business insights from any CSV dataset. Deployed on Google Cloud Run.",
-      image: "/images/helpmate-chatbot.png",
+      image: "/images/ai-data-analyst-agent.jpg",
       tags: ["Python", "Google Gemini API", "Flask", "Pandas", "SQLite", "Matplotlib"],
       category: "ai",
       github: "https://github.com/01Priyanshu/ai-data-analyst-agent",
@@ -1133,331 +1133,440 @@ portfolio()`}
                       </motion.p>
                     </div>
                   </div>
-                  <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:gap-12">
+                  <div className="mx-auto grid max-w-6xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
+                    {/* 1. Programming & Data Analysis */}
                     <motion.div
-                      initial={{ opacity: 0, x: -50 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: 0.2 }}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.1 }}
                       className="perspective-container"
                       whileHover={{ scale: 1.02 }}
                     >
-                      <Card className="card-hover border-primary/10 glow-on-hover skill-card rotate-on-scroll card-3d cursor-hover">
-                        <CardHeader className="bg-gradient-to-r from-primary/10 to-transparent rounded-t-lg">
-                          <CardTitle className="flex items-center gap-2">
+                      <Card className="card-hover border-primary/10 glow-on-hover skill-card rotate-on-scroll card-3d cursor-hover h-full flex flex-col justify-between">
+                        <CardHeader className="bg-gradient-to-r from-primary/10 to-transparent rounded-t-lg pb-3">
+                          <CardTitle className="flex items-center gap-2 text-lg">
                             <Code className="h-5 w-5 text-primary" />
-                            Programming Languages
+                            Programming & Data Analysis
                           </CardTitle>
                         </CardHeader>
-                        <CardContent className="space-y-4 pt-6">
-                          <div className="space-y-2 progress-bar-animated">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm font-medium code-font flex items-center">
-                                <span className="text-primary mr-2">&gt;</span> Python
-                              </span>
-                              <span className="text-sm text-muted-foreground">95%</span>
+                        <CardContent className="space-y-4 pt-4 flex-1 flex flex-col justify-between">
+                          <div className="space-y-3">
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Python
+                                </span>
+                                <span className="text-muted-foreground">95%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "95%" }} transition={{ duration: 1, delay: 0.2 }} />
+                              </div>
                             </div>
-                            <div className="h-2 w-full bg-secondary/10 rounded-full overflow-hidden">
-                              <motion.div
-                                className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full"
-                                initial={{ width: 0 }}
-                                animate={{ width: "95%" }}
-                                transition={{ duration: 1, delay: 0.3 }}
-                              ></motion.div>
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> SQL
+                                </span>
+                                <span className="text-muted-foreground">92%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "92%" }} transition={{ duration: 1, delay: 0.3 }} />
+                              </div>
                             </div>
-                          </div>
-                          <div className="space-y-2 progress-bar-animated">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm font-medium code-font flex items-center">
-                                <span className="text-primary mr-2">&gt;</span> Java
-                              </span>
-                              <span className="text-sm text-muted-foreground">85%</span>
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Pandas & NumPy
+                                </span>
+                                <span className="text-muted-foreground">95%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "95%" }} transition={{ duration: 1, delay: 0.4 }} />
+                              </div>
                             </div>
-                            <div className="h-2 w-full bg-secondary/10 rounded-full overflow-hidden">
-                              <motion.div
-                                className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full"
-                                initial={{ width: 0 }}
-                                animate={{ width: "85%" }}
-                                transition={{ duration: 1, delay: 0.4 }}
-                              ></motion.div>
-                            </div>
-                          </div>
-                          <div className="space-y-2 progress-bar-animated">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm font-medium code-font flex items-center">
-                                <span className="text-primary mr-2">&gt;</span> SQL
-                              </span>
-                              <span className="text-sm text-muted-foreground">80%</span>
-                            </div>
-                            <div className="h-2 w-full bg-secondary/10 rounded-full overflow-hidden">
-                              <motion.div
-                                className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full"
-                                initial={{ width: 0 }}
-                                animate={{ width: "80%" }}
-                                transition={{ duration: 1, delay: 0.5 }}
-                              ></motion.div>
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Data Cleaning & EDA
+                                </span>
+                                <span className="text-muted-foreground">90%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "90%" }} transition={{ duration: 1, delay: 0.5 }} />
+                              </div>
                             </div>
                           </div>
-                          <div className="space-y-2 progress-bar-animated">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm font-medium code-font flex items-center">
-                                <span className="text-primary mr-2">&gt;</span> JavaScript
-                              </span>
-                              <span className="text-sm text-muted-foreground">75%</span>
-                            </div>
-                            <div className="h-2 w-full bg-secondary/10 rounded-full overflow-hidden">
-                              <motion.div
-                                className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full"
-                                initial={{ width: 0 }}
-                                animate={{ width: "75%" }}
-                                transition={{ duration: 1, delay: 0.6 }}
-                              ></motion.div>
-                            </div>
+                          <div className="flex flex-wrap gap-1 pt-3 border-t border-primary/10">
+                            {["Python", "SQL", "Pandas", "NumPy", "Data Cleaning", "EDA"].map((tag) => (
+                              <Badge key={tag} variant="outline" className="text-[10px] bg-primary/5 border-primary/20 text-foreground py-0 px-2">
+                                {tag}
+                              </Badge>
+                            ))}
                           </div>
                         </CardContent>
                       </Card>
                     </motion.div>
+
+                    {/* 2. Business Intelligence & Visualization */}
                     <motion.div
-                      initial={{ opacity: 0, x: 50 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: 0.3 }}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.2 }}
                       className="perspective-container"
                       whileHover={{ scale: 1.02 }}
                     >
-                      <Card className="card-hover border-primary/10 glow-on-hover skill-card rotate-on-scroll card-3d cursor-hover">
-                        <CardHeader className="bg-gradient-to-r from-primary/10 to-transparent rounded-t-lg">
-                          <CardTitle className="flex items-center gap-2">
+                      <Card className="card-hover border-primary/10 glow-on-hover skill-card rotate-on-scroll card-3d cursor-hover h-full flex flex-col justify-between">
+                        <CardHeader className="bg-gradient-to-r from-primary/10 to-transparent rounded-t-lg pb-3">
+                          <CardTitle className="flex items-center gap-2 text-lg">
+                            <BarChart2 className="h-5 w-5 text-primary" />
+                            BI & Visualization
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-4 pt-4 flex-1 flex flex-col justify-between">
+                          <div className="space-y-3">
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Power BI & DAX
+                                </span>
+                                <span className="text-muted-foreground">92%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "92%" }} transition={{ duration: 1, delay: 0.2 }} />
+                              </div>
+                            </div>
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Tableau
+                                </span>
+                                <span className="text-muted-foreground">88%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "88%" }} transition={{ duration: 1, delay: 0.3 }} />
+                              </div>
+                            </div>
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Excel & Power Pivot
+                                </span>
+                                <span className="text-muted-foreground">94%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "94%" }} transition={{ duration: 1, delay: 0.4 }} />
+                              </div>
+                            </div>
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> KPI Reporting & Matplotlib
+                                </span>
+                                <span className="text-muted-foreground">90%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "90%" }} transition={{ duration: 1, delay: 0.5 }} />
+                              </div>
+                            </div>
+                          </div>
+                          <div className="flex flex-wrap gap-1 pt-3 border-t border-primary/10">
+                            {["Power BI", "Tableau", "Excel", "Power Pivot", "DAX", "Data Modeling", "KPIs"].map((tag) => (
+                              <Badge key={tag} variant="outline" className="text-[10px] bg-primary/5 border-primary/20 text-foreground py-0 px-2">
+                                {tag}
+                              </Badge>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+
+                    {/* 3. Statistics & Mathematics */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.3 }}
+                      className="perspective-container"
+                      whileHover={{ scale: 1.02 }}
+                    >
+                      <Card className="card-hover border-primary/10 glow-on-hover skill-card rotate-on-scroll card-3d cursor-hover h-full flex flex-col justify-between">
+                        <CardHeader className="bg-gradient-to-r from-primary/10 to-transparent rounded-t-lg pb-3">
+                          <CardTitle className="flex items-center gap-2 text-lg">
+                            <Zap className="h-5 w-5 text-primary" />
+                            Statistics & Mathematics
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-4 pt-4 flex-1 flex flex-col justify-between">
+                          <div className="space-y-3">
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Regression & Time Series
+                                </span>
+                                <span className="text-muted-foreground">92%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "92%" }} transition={{ duration: 1, delay: 0.2 }} />
+                              </div>
+                            </div>
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Hypothesis & A/B Testing
+                                </span>
+                                <span className="text-muted-foreground">88%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "88%" }} transition={{ duration: 1, delay: 0.3 }} />
+                              </div>
+                            </div>
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Linear Algebra & Calculus
+                                </span>
+                                <span className="text-muted-foreground">86%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "86%" }} transition={{ duration: 1, delay: 0.4 }} />
+                              </div>
+                            </div>
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Mathematical Optimization
+                                </span>
+                                <span className="text-muted-foreground">85%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "85%" }} transition={{ duration: 1, delay: 0.5 }} />
+                              </div>
+                            </div>
+                          </div>
+                          <div className="flex flex-wrap gap-1 pt-3 border-t border-primary/10">
+                            {["Regression", "Hypothesis Testing", "A/B Testing", "Time Series", "Optimization"].map((tag) => (
+                              <Badge key={tag} variant="outline" className="text-[10px] bg-primary/5 border-primary/20 text-foreground py-0 px-2">
+                                {tag}
+                              </Badge>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+
+                    {/* 4. Machine Learning & Deep Learning */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.4 }}
+                      className="perspective-container"
+                      whileHover={{ scale: 1.02 }}
+                    >
+                      <Card className="card-hover border-primary/10 glow-on-hover skill-card rotate-on-scroll card-3d cursor-hover h-full flex flex-col justify-between">
+                        <CardHeader className="bg-gradient-to-r from-primary/10 to-transparent rounded-t-lg pb-3">
+                          <CardTitle className="flex items-center gap-2 text-lg">
                             <Brain className="h-5 w-5 text-primary" />
-                            Data Science & ML
+                            Machine Learning & NLP
                           </CardTitle>
                         </CardHeader>
-                        <CardContent className="space-y-4 pt-6">
-                          <div className="space-y-2 progress-bar-animated">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm font-medium code-font flex items-center">
-                                <span className="text-primary mr-2">&gt;</span> Pandas/NumPy
-                              </span>
-                              <span className="text-sm text-muted-foreground">95%</span>
+                        <CardContent className="space-y-4 pt-4 flex-1 flex flex-col justify-between">
+                          <div className="space-y-3">
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Scikit-Learn & Ensembles
+                                </span>
+                                <span className="text-muted-foreground">92%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "92%" }} transition={{ duration: 1, delay: 0.2 }} />
+                              </div>
                             </div>
-                            <div className="h-2 w-full bg-secondary/10 rounded-full overflow-hidden">
-                              <motion.div
-                                className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full"
-                                initial={{ width: 0 }}
-                                animate={{ width: "95%" }}
-                                transition={{ duration: 1, delay: 0.3 }}
-                              ></motion.div>
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Neural Networks & PyTorch
+                                </span>
+                                <span className="text-muted-foreground">86%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "86%" }} transition={{ duration: 1, delay: 0.3 }} />
+                              </div>
                             </div>
-                          </div>
-                          <div className="space-y-2 progress-bar-animated">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm font-medium code-font flex items-center">
-                                <span className="text-primary mr-2">&gt;</span> Scikit-Learn
-                              </span>
-                              <span className="text-sm text-muted-foreground">90%</span>
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> NLP & Transformers
+                                </span>
+                                <span className="text-muted-foreground">90%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "90%" }} transition={{ duration: 1, delay: 0.4 }} />
+                              </div>
                             </div>
-                            <div className="h-2 w-full bg-secondary/10 rounded-full overflow-hidden">
-                              <motion.div
-                                className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full"
-                                initial={{ width: 0 }}
-                                animate={{ width: "90%" }}
-                                transition={{ duration: 1, delay: 0.4 }}
-                              ></motion.div>
-                            </div>
-                          </div>
-                          <div className="space-y-2 progress-bar-animated">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm font-medium code-font flex items-center">
-                                <span className="text-primary mr-2">&gt;</span> TensorFlow
-                              </span>
-                              <span className="text-sm text-muted-foreground">80%</span>
-                            </div>
-                            <div className="h-2 w-full bg-secondary/10 rounded-full overflow-hidden">
-                              <motion.div
-                                className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full"
-                                initial={{ width: 0 }}
-                                animate={{ width: "80%" }}
-                                transition={{ duration: 1, delay: 0.5 }}
-                              ></motion.div>
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Recommendation Systems
+                                </span>
+                                <span className="text-muted-foreground">88%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "88%" }} transition={{ duration: 1, delay: 0.5 }} />
+                              </div>
                             </div>
                           </div>
-                          <div className="space-y-2 progress-bar-animated">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm font-medium code-font flex items-center">
-                                <span className="text-primary mr-2">&gt;</span> Power BI / Tableau
-                              </span>
-                              <span className="text-sm text-muted-foreground">85%</span>
-                            </div>
-                            <div className="h-2 w-full bg-secondary/10 rounded-full overflow-hidden">
-                              <motion.div
-                                className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full"
-                                initial={{ width: 0 }}
-                                animate={{ width: "85%" }}
-                                transition={{ duration: 1, delay: 0.6 }}
-                              ></motion.div>
-                            </div>
+                          <div className="flex flex-wrap gap-1 pt-3 border-t border-primary/10">
+                            {["Scikit-learn", "Random Forest", "GBDT", "PyTorch", "TensorFlow", "NLP", "LLMs"].map((tag) => (
+                              <Badge key={tag} variant="outline" className="text-[10px] bg-primary/5 border-primary/20 text-foreground py-0 px-2">
+                                {tag}
+                              </Badge>
+                            ))}
                           </div>
                         </CardContent>
                       </Card>
                     </motion.div>
+
+                    {/* 5. Databases & Data Modeling */}
                     <motion.div
-                      initial={{ opacity: 0, x: -50 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: 0.4 }}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
                       className="perspective-container"
                       whileHover={{ scale: 1.02 }}
                     >
-                      <Card className="card-hover border-primary/10 glow-on-hover skill-card rotate-on-scroll card-3d cursor-hover">
-                        <CardHeader className="bg-gradient-to-r from-primary/10 to-transparent rounded-t-lg">
-                          <CardTitle className="flex items-center gap-2">
-                            <Monitor className="h-5 w-5 text-primary" />
-                            Web Development
+                      <Card className="card-hover border-primary/10 glow-on-hover skill-card rotate-on-scroll card-3d cursor-hover h-full flex flex-col justify-between">
+                        <CardHeader className="bg-gradient-to-r from-primary/10 to-transparent rounded-t-lg pb-3">
+                          <CardTitle className="flex items-center gap-2 text-lg">
+                            <Database className="h-5 w-5 text-primary" />
+                            Databases & Architecture
                           </CardTitle>
                         </CardHeader>
-                        <CardContent className="space-y-4 pt-6">
-                          <div className="space-y-2 progress-bar-animated">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm font-medium code-font flex items-center">
-                                <span className="text-primary mr-2">&gt;</span> HTML/CSS
-                              </span>
-                              <span className="text-sm text-muted-foreground">90%</span>
+                        <CardContent className="space-y-4 pt-4 flex-1 flex flex-col justify-between">
+                          <div className="space-y-3">
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> MySQL & Relational DBs
+                                </span>
+                                <span className="text-muted-foreground">92%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "92%" }} transition={{ duration: 1, delay: 0.2 }} />
+                              </div>
                             </div>
-                            <div className="h-2 w-full bg-secondary/10 rounded-full overflow-hidden">
-                              <motion.div
-                                className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full"
-                                initial={{ width: 0 }}
-                                animate={{ width: "90%" }}
-                                transition={{ duration: 1, delay: 0.3 }}
-                              ></motion.div>
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> MongoDB (NoSQL)
+                                </span>
+                                <span className="text-muted-foreground">88%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "88%" }} transition={{ duration: 1, delay: 0.3 }} />
+                              </div>
                             </div>
-                          </div>
-                          <div className="space-y-2 progress-bar-animated">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm font-medium code-font flex items-center">
-                                <span className="text-primary mr-2">&gt;</span> React.js
-                              </span>
-                              <span className="text-sm text-muted-foreground">85%</span>
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Neo4j (Graph DB)
+                                </span>
+                                <span className="text-muted-foreground">86%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "86%" }} transition={{ duration: 1, delay: 0.4 }} />
+                              </div>
                             </div>
-                            <div className="h-2 w-full bg-secondary/10 rounded-full overflow-hidden">
-                              <motion.div
-                                className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full"
-                                initial={{ width: 0 }}
-                                animate={{ width: "85%" }}
-                                transition={{ duration: 1, delay: 0.4 }}
-                              ></motion.div>
-                            </div>
-                          </div>
-                          <div className="space-y-2 progress-bar-animated">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm font-medium code-font flex items-center">
-                                <span className="text-primary mr-2">&gt;</span> Node.js
-                              </span>
-                              <span className="text-sm text-muted-foreground">80%</span>
-                            </div>
-                            <div className="h-2 w-full bg-secondary/10 rounded-full overflow-hidden">
-                              <motion.div
-                                className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full"
-                                initial={{ width: 0 }}
-                                animate={{ width: "80%" }}
-                                transition={{ duration: 1, delay: 0.5 }}
-                              ></motion.div>
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Stored Procedures & Tuning
+                                </span>
+                                <span className="text-muted-foreground">88%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "88%" }} transition={{ duration: 1, delay: 0.5 }} />
+                              </div>
                             </div>
                           </div>
-                          <div className="space-y-2 progress-bar-animated">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm font-medium code-font flex items-center">
-                                <span className="text-primary mr-2">&gt;</span> MongoDB/MySQL
-                              </span>
-                              <span className="text-sm text-muted-foreground">75%</span>
-                            </div>
-                            <div className="h-2 w-full bg-secondary/10 rounded-full overflow-hidden">
-                              <motion.div
-                                className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full"
-                                initial={{ width: 0 }}
-                                animate={{ width: "75%" }}
-                                transition={{ duration: 1, delay: 0.6 }}
-                              ></motion.div>
-                            </div>
+                          <div className="flex flex-wrap gap-1 pt-3 border-t border-primary/10">
+                            {["MySQL", "MongoDB", "Neo4j", "Stored Procedures", "ETL", "Schema Design"].map((tag) => (
+                              <Badge key={tag} variant="outline" className="text-[10px] bg-primary/5 border-primary/20 text-foreground py-0 px-2">
+                                {tag}
+                              </Badge>
+                            ))}
                           </div>
                         </CardContent>
                       </Card>
                     </motion.div>
+
+                    {/* 6. Cloud & Tools */}
                     <motion.div
-                      initial={{ opacity: 0, x: 50 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: 0.5 }}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.6 }}
                       className="perspective-container"
                       whileHover={{ scale: 1.02 }}
                     >
-                      <Card className="card-hover border-primary/10 glow-on-hover skill-card rotate-on-scroll card-3d cursor-hover">
-                        <CardHeader className="bg-gradient-to-r from-primary/10 to-transparent rounded-t-lg">
-                          <CardTitle className="flex items-center gap-2">
+                      <Card className="card-hover border-primary/10 glow-on-hover skill-card rotate-on-scroll card-3d cursor-hover h-full flex flex-col justify-between">
+                        <CardHeader className="bg-gradient-to-r from-primary/10 to-transparent rounded-t-lg pb-3">
+                          <CardTitle className="flex items-center gap-2 text-lg">
                             <Server className="h-5 w-5 text-primary" />
-                            Tools & Technologies
+                            Cloud & Developer Tools
                           </CardTitle>
                         </CardHeader>
-                        <CardContent className="space-y-4 pt-6">
-                          <div className="space-y-2 progress-bar-animated">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm font-medium code-font flex items-center">
-                                <span className="text-primary mr-2">&gt;</span> AWS
-                              </span>
-                              <span className="text-sm text-muted-foreground">80%</span>
+                        <CardContent className="space-y-4 pt-4 flex-1 flex flex-col justify-between">
+                          <div className="space-y-3">
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Cloud (AWS / GCP / Azure)
+                                </span>
+                                <span className="text-muted-foreground">88%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "88%" }} transition={{ duration: 1, delay: 0.2 }} />
+                              </div>
                             </div>
-                            <div className="h-2 w-full bg-secondary/10 rounded-full overflow-hidden">
-                              <motion.div
-                                className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full"
-                                initial={{ width: 0 }}
-                                animate={{ width: "80%" }}
-                                transition={{ duration: 1, delay: 0.3 }}
-                              ></motion.div>
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Docker & Containers
+                                </span>
+                                <span className="text-muted-foreground">88%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "88%" }} transition={{ duration: 1, delay: 0.3 }} />
+                              </div>
                             </div>
-                          </div>
-                          <div className="space-y-2 progress-bar-animated">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm font-medium code-font flex items-center">
-                                <span className="text-primary mr-2">&gt;</span> Docker
-                              </span>
-                              <span className="text-sm text-muted-foreground">85%</span>
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Git & GitHub CI/CD
+                                </span>
+                                <span className="text-muted-foreground">92%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "92%" }} transition={{ duration: 1, delay: 0.4 }} />
+                              </div>
                             </div>
-                            <div className="h-2 w-full bg-secondary/10 rounded-full overflow-hidden">
-                              <motion.div
-                                className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full"
-                                initial={{ width: 0 }}
-                                animate={{ width: "85%" }}
-                                transition={{ duration: 1, delay: 0.4 }}
-                              ></motion.div>
-                            </div>
-                          </div>
-                          <div className="space-y-2 progress-bar-animated">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm font-medium code-font flex items-center">
-                                <span className="text-primary mr-2">&gt;</span> Git/GitHub
-                              </span>
-                              <span className="text-sm text-muted-foreground">90%</span>
-                            </div>
-                            <div className="h-2 w-full bg-secondary/10 rounded-full overflow-hidden">
-                              <motion.div
-                                className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full"
-                                initial={{ width: 0 }}
-                                animate={{ width: "90%" }}
-                                transition={{ duration: 1, delay: 0.5 }}
-                              ></motion.div>
+                            <div className="space-y-1 progress-bar-animated">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="font-medium code-font flex items-center">
+                                  <span className="text-primary mr-1.5">&gt;</span> Flask & Streamlit
+                                </span>
+                                <span className="text-muted-foreground">90%</span>
+                              </div>
+                              <div className="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                                <motion.div className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full" initial={{ width: 0 }} animate={{ width: "90%" }} transition={{ duration: 1, delay: 0.5 }} />
+                              </div>
                             </div>
                           </div>
-                          <div className="space-y-2 progress-bar-animated">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm font-medium code-font flex items-center">
-                                <span className="text-primary mr-2">&gt;</span> Excel / DAX / Power Pivot
-                              </span>
-                              <span className="text-sm text-muted-foreground">90%</span>
-                            </div>
-                            <div className="h-2 w-full bg-secondary/10 rounded-full overflow-hidden">
-                              <motion.div
-                                className="progress-value h-full bg-gradient-to-r from-primary/80 to-accent/80 rounded-full"
-                                initial={{ width: 0 }}
-                                animate={{ width: "90%" }}
-                                transition={{ duration: 1, delay: 0.6 }}
-                              ></motion.div>
-                            </div>
+                          <div className="flex flex-wrap gap-1 pt-3 border-t border-primary/10">
+                            {["AWS", "Azure", "GCP", "Docker", "Git", "Flask", "Streamlit"].map((tag) => (
+                              <Badge key={tag} variant="outline" className="text-[10px] bg-primary/5 border-primary/20 text-foreground py-0 px-2">
+                                {tag}
+                              </Badge>
+                            ))}
                           </div>
                         </CardContent>
                       </Card>
