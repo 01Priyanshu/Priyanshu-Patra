@@ -700,7 +700,7 @@ portfolio()`}
                               </div>
                             </div>
                             <div className="text-xs text-muted-foreground mt-1">
-                              <span className="font-medium text-primary">Relevant Coursework:</span> DSE 501 – Statistics for Data Analysts, CSE 511 – Data Processing at Scale, CSE 543 – Information Assurance and Security, CSE 578 – Data Visualization, CSE 575 – Statistical Machine Learning, CSE 572 – Data Mining
+                              <span className="font-medium text-primary">Relevant Coursework:</span> DSE 501 – Statistics for Data Analysts, CSE 511 – Data Processing at Scale, CSE 510 – Database Management System Implementation, CSE 576 – Topics in Natural Language Processing, DSE 506 – Computing for Data-Driven Optimization, CSE 578 – Data Visualization, CSE 575 – Statistical Machine Learning, CSE 572 – Data Mining, CSE 543 – Information Assurance and Security
                             </div>
                           </motion.li>
                           <motion.li
@@ -725,7 +725,7 @@ portfolio()`}
                                 <div className="text-sm text-muted-foreground">
                                   SRM Institute of Science and Technology, Chennai, India • Sep 2020 – May 2024
                                 </div>
-                                <p className="text-sm text-muted-foreground">GPA: 3.58/4.0 (CGPA: 8.9/10)</p>
+                                <p className="text-sm font-medium text-primary">GPA: 3.58/4.0 (CGPA: 8.9/10)</p>
                               </div>
                             </div>
                             <div className="text-xs text-muted-foreground mt-1">
