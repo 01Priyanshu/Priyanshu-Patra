@@ -38,11 +38,12 @@ export default function CertificatesTimeline() {
     },
     {
       id: 4,
-      title: "SQL Advanced",
+      title: "SQL (Advanced)",
       issuer: "HackerRank",
       date: "Mar 2025",
       icon: <Award className="h-5 w-5 text-primary" />,
       imagePath: "/images/sql-advanced.png",
+      description: "Advanced SQL certification by HackerRank demonstrating expertise in complex queries, subqueries, indexing, window functions, and database query optimization.",
     },
     {
       id: 5,

@@ -21,6 +21,10 @@ import {
   ChevronRight,
   ChevronLeft,
   Download,
+  Phone,
+  MapPin,
+  GraduationCap,
+  BookOpen,
 } from "lucide-react"
 import { motion } from "framer-motion"
 
@@ -616,7 +620,7 @@ def portfolio():
       <p>I am a results-driven Computer Science Engineer specializing in Data Science, Artificial Intelligence, and Full-Stack Development. My work reflects a blend of analytical thinking, problem-solving, and creativity, ensuring impactful outcomes across every project.</p>
 
       <h2>Professional Background</h2>
-      <p>Planning to pursue a Master's in Data Science, I bring a diverse skill set developed through coursework and industry internships. My experience includes advanced AI projects like an AI-Powered Resume Screening System and practical applications such as a Smart Personal Finance Management System.</p>
+      <p>Currently pursuing a Master of Science in Data Science, Analytics and Engineering (DSAE) at Arizona State University (GPA: 4.0/4.0), I serve as an Instructional Assistant for CSE 205 and Grader for CSE 511. I bring a strong analytical foundation developed through academic leadership and industry internships.</p>
 
       <h2>Technical Expertise</h2>
       <ul>
@@ -628,7 +632,7 @@ def portfolio():
       </ul>
 
       <h2>Achievements & Certifications</h2>
-      <p>I hold certifications from Microsoft (AI & ML Engineering), IBM (SkillsBuild AI), and Shell (Green Skills using AI). My achievements include building cutting-edge systems during high-impact internships and delivering academic projects that demonstrate a commitment to excellence.</p>
+      <p>I hold certifications including AWS Educate Introduction to Generative AI, Microsoft AI & ML Engineering, and SQL (Advanced) by HackerRank. My achievements include building cutting-edge data systems and serving as an Instructional Assistant and Grader at Arizona State University.</p>
 
       <a href="#projects" class="btn btn-primary">View My Work</a>
       <a href="#contact" class="btn btn-secondary">Contact Me</a>
@@ -687,12 +691,12 @@ portfolio()`}
                               />
                               <div>
                                 <div className="font-semibold">
-                                  Master of Science in Data Science, Analytics and Engineering
+                                  Master of Science in Data Science, Analytics and Engineering (DSAE)
                                 </div>
                                 <div className="text-sm text-muted-foreground">
-                                  Arizona State University, Tempe, USA • Aug 2025 - Present
+                                  Arizona State University, Tempe, AZ, USA • Aug 2025 – Expected May 2027
                                 </div>
-                                <p className="text-sm text-muted-foreground">GPA: 4.0/4.0</p>
+                                <p className="text-sm font-medium text-primary">GPA: 4.0/4.0</p>
                               </div>
                             </div>
                             <div className="text-xs text-muted-foreground mt-1">
@@ -716,12 +720,12 @@ portfolio()`}
                               />
                               <div>
                                 <div className="font-semibold">
-                                  Bachelor of Technology (B.Tech) in Computer Science and Engineering
+                                  Bachelor of Technology in Computer Science and Engineering (CSE)
                                 </div>
                                 <div className="text-sm text-muted-foreground">
-                                  SRM Institute of Science and Technology, Chennai • Sep 2020 - May 2024
+                                  SRM Institute of Science and Technology, Chennai, India • Sep 2020 – May 2024
                                 </div>
-                                <p className="text-sm text-muted-foreground">CGPA: 8.9/10</p>
+                                <p className="text-sm text-muted-foreground">GPA: 3.58/4.0 (CGPA: 8.9/10)</p>
                               </div>
                             </div>
                             <div className="text-xs text-muted-foreground mt-1">
@@ -812,6 +816,55 @@ portfolio()`}
                   </div>
 
                   <div className="mx-auto max-w-5xl space-y-8">
+                    {/* Experience 1: ASU IA */}
+                    <motion.div
+                      className="relative pl-8 pb-8 border-l-2 border-primary/50 transition-all duration-300 hover:border-l-primary"
+                      initial={{ opacity: 0, y: 50 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.05 }}
+                      whileHover={{ x: 5 }}
+                    >
+                      <div className="absolute left-0 top-0 flex items-center justify-center w-8 h-8 -translate-x-1/2 rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground transition-transform duration-300 hover:scale-110 shadow-lg shadow-primary/20">
+                        <span className="text-xs font-bold">1</span>
+                      </div>
+                      <div className="space-y-2 transition-all duration-300 hover:translate-x-2 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light animated-border cursor-hover">
+                        <div className="flex justify-between items-start flex-wrap gap-2">
+                          <div>
+                            <h3 className="text-xl font-bold flex items-center gap-2">
+                              <Star className="h-5 w-5 text-accent" />
+                              Arizona State University
+                            </h3>
+                            <p className="text-sm font-medium text-primary">Instructional Assistant, CSE 205: Object Oriented Programming & Data Structures</p>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Badge className="bg-primary/20 text-primary border border-primary/30">Sep 2026 – Present</Badge>
+                            <Badge variant="outline" className="text-xs text-muted-foreground">Tempe, AZ</Badge>
+                          </div>
+                        </div>
+                        <p className="text-muted-foreground">
+                          Guide CSE 205 students through Java, object-oriented programming, data structures and debugging during office hours and course discussions. Clarify assignment requirements, support problem-solving, and assist with instructional activities, including Honorlock review.
+                        </p>
+                        <div className="flex flex-wrap gap-2 pt-2">
+                          <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
+                            Java
+                          </Badge>
+                          <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
+                            OOP
+                          </Badge>
+                          <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
+                            Data Structures
+                          </Badge>
+                          <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
+                            Debugging
+                          </Badge>
+                          <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
+                            Mentorship
+                          </Badge>
+                        </div>
+                      </div>
+                    </motion.div>
+
+                    {/* Experience 2: ASU Grader */}
                     <motion.div
                       className="relative pl-8 pb-8 border-l-2 border-primary/50 transition-all duration-300 hover:border-l-primary"
                       initial={{ opacity: 0, y: 50 }}
@@ -820,16 +873,61 @@ portfolio()`}
                       whileHover={{ x: 5 }}
                     >
                       <div className="absolute left-0 top-0 flex items-center justify-center w-8 h-8 -translate-x-1/2 rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground transition-transform duration-300 hover:scale-110 shadow-lg shadow-primary/20">
-                        <span className="text-xs font-bold">1</span>
+                        <span className="text-xs font-bold">2</span>
+                      </div>
+                      <div className="space-y-2 transition-all duration-300 hover:translate-x-2 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light animated-border cursor-hover">
+                        <div className="flex justify-between items-start flex-wrap gap-2">
+                          <div>
+                            <h3 className="text-xl font-bold flex items-center gap-2">
+                              <Star className="h-5 w-5 text-accent" />
+                              Arizona State University
+                            </h3>
+                            <p className="text-sm font-medium text-primary">Grader, CSE 511: Data Processing at Scale</p>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Badge className="bg-primary/20 text-primary border border-primary/30">Aug 2026 – Present</Badge>
+                            <Badge variant="outline" className="text-xs text-muted-foreground">Tempe, AZ</Badge>
+                          </div>
+                        </div>
+                        <p className="text-muted-foreground">
+                          Evaluate assignments and assessments for graduate-level CSE 511: Data Processing at Scale, applying course rubrics to provide consistent grading and constructive feedback. Collaborate with the instructor and teaching team to resolve grading questions and complete evaluations on schedule.
+                        </p>
+                        <div className="flex flex-wrap gap-2 pt-2">
+                          <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
+                            Data Processing at Scale
+                          </Badge>
+                          <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
+                            Distributed Systems
+                          </Badge>
+                          <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
+                            Big Data
+                          </Badge>
+                          <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
+                            Course Assessment
+                          </Badge>
+                        </div>
+                      </div>
+                    </motion.div>
+
+                    {/* Experience 3: Microsoft & SAP */}
+                    <motion.div
+                      className="relative pl-8 pb-8 border-l-2 border-primary/50 transition-all duration-300 hover:border-l-primary"
+                      initial={{ opacity: 0, y: 50 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.15 }}
+                      whileHover={{ x: 5 }}
+                    >
+                      <div className="absolute left-0 top-0 flex items-center justify-center w-8 h-8 -translate-x-1/2 rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground transition-transform duration-300 hover:scale-110 shadow-lg shadow-primary/20">
+                        <span className="text-xs font-bold">3</span>
                       </div>
                       <div className="space-y-2 transition-all duration-300 hover:translate-x-2 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light animated-border cursor-hover">
                         <div className="flex justify-between items-start">
                           <div>
                             <h3 className="text-xl font-bold flex items-center gap-2">
                               <Star className="h-5 w-5 text-accent" />
-                              Edunet Foundation in collaboration with Microsoft & SAP
+                              Edunet Foundation, Microsoft & SAP Initiative
                             </h3>
-                            <p className="text-sm font-medium text-primary">AI-ML Intern</p>
+                            <p className="text-sm font-medium text-primary">AICTE Virtual Intern</p>
                           </div>
                           <div className="flex items-center gap-2">
                             <Badge className="bg-primary/10 text-foreground">Feb 2025 – Mar 2025</Badge>
@@ -840,26 +938,26 @@ portfolio()`}
                           </div>
                         </div>
                         <p className="text-muted-foreground">
-                          Built an AI-Powered Resume Screening and Ranking System for automated resume evaluation.
-                          Designed and implemented AI algorithms for resume parsing and candidate ranking. Engaged in
-                          technical workshops and mentorship sessions with Microsoft & SAP experts.
+                          Developed an NLP-based resume screening pipeline using Python and spaCy for candidate scoring and ranking during a mentor-guided virtual internship. Built a Flask REST API to serve the screening model and return resume scores.
                         </p>
                         <div className="flex flex-wrap gap-2 pt-2">
-                          <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
-                            AI
-                          </Badge>
-                          <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
-                            Machine Learning
-                          </Badge>
                           <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
                             Python
                           </Badge>
                           <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
+                            spaCy
+                          </Badge>
+                          <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
                             NLP
+                          </Badge>
+                          <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
+                            Flask REST API
                           </Badge>
                         </div>
                       </div>
                     </motion.div>
+
+                    {/* Experience 4: Shell */}
                     <motion.div
                       className="relative pl-8 pb-8 border-l-2 border-primary/50 transition-all duration-300 hover:border-l-primary"
                       initial={{ opacity: 0, y: 50 }}
@@ -868,7 +966,7 @@ portfolio()`}
                       whileHover={{ x: 5 }}
                     >
                       <div className="absolute left-0 top-0 flex items-center justify-center w-8 h-8 -translate-x-1/2 rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground transition-transform duration-300 hover:scale-110 shadow-lg shadow-primary/20">
-                        <span className="text-xs font-bold">2</span>
+                        <span className="text-xs font-bold">4</span>
                       </div>
                       <div className="space-y-2 transition-all duration-300 hover:translate-x-2 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light animated-border cursor-hover">
                         <div className="flex justify-between items-start">
@@ -888,9 +986,7 @@ portfolio()`}
                           </div>
                         </div>
                         <p className="text-muted-foreground">
-                          Developed Helpmate – an AI-driven Wellness Health Chatbot for health assistance and
-                          recommendations. Optimized chatbot responses using data modeling techniques for improved user
-                          interaction. Incorporated mentor feedback and presented the final project to industry experts.
+                          Developed Helpmate – an AI-driven Wellness Health Chatbot for health assistance and recommendations. Optimized chatbot responses using data modeling techniques for improved user interaction. Incorporated mentor feedback and presented the final project to industry experts.
                         </p>
                         <div className="flex flex-wrap gap-2 pt-2">
                           <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
@@ -908,24 +1004,26 @@ portfolio()`}
                         </div>
                       </div>
                     </motion.div>
+
+                    {/* Experience 5: EY GDS */}
                     <motion.div
                       className="relative pl-8 pb-8 border-l-2 border-primary/50 transition-all duration-300 hover:border-l-primary"
                       initial={{ opacity: 0, y: 50 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.3 }}
+                      transition={{ duration: 0.6, delay: 0.25 }}
                       whileHover={{ x: 5 }}
                     >
                       <div className="absolute left-0 top-0 flex items-center justify-center w-8 h-8 -translate-x-1/2 rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground transition-transform duration-300 hover:scale-110 shadow-lg shadow-primary/20">
-                        <span className="text-xs font-bold">3</span>
+                        <span className="text-xs font-bold">5</span>
                       </div>
                       <div className="space-y-2 transition-all duration-300 hover:translate-x-2 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light animated-border cursor-hover">
                         <div className="flex justify-between items-start">
                           <div>
                             <h3 className="text-xl font-bold flex items-center gap-2">
                               <Star className="h-5 w-5 text-accent" />
-                              Edunet Foundation in collaboration with EY GDS
+                              Edunet Foundation, EY-GDS Initiative
                             </h3>
-                            <p className="text-sm font-medium text-primary">Full Stack Web Development Intern</p>
+                            <p className="text-sm font-medium text-primary">AICTE Virtual Intern</p>
                           </div>
                           <div className="flex items-center gap-2">
                             <Badge className="bg-primary/10 text-foreground">Sep 2024 – Nov 2024</Badge>
@@ -936,35 +1034,35 @@ portfolio()`}
                           </div>
                         </div>
                         <p className="text-muted-foreground">
-                          Developed Finance Tracker using the MERN stack for real-time expense tracking. Improved
-                          financial data visualization and collaborated on UI/UX design. Delivered weekly milestones and
-                          presented to EY industry experts.
+                          Built an expense tracking application using the MERN stack and Recharts, providing visual summaries of recorded expenses during a mentor-guided virtual internship. Implemented JWT authentication and role-based access control to separate user data in an AWS-hosted application.
                         </p>
                         <div className="flex flex-wrap gap-2 pt-2">
                           <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
                             MERN Stack
                           </Badge>
                           <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
-                            JavaScript
+                            Recharts
                           </Badge>
                           <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
-                            React
+                            JWT & RBAC
                           </Badge>
                           <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
-                            MongoDB
+                            AWS
                           </Badge>
                         </div>
                       </div>
                     </motion.div>
+
+                    {/* Experience 6: IBM */}
                     <motion.div
                       className="relative pl-8 pb-8 border-l-2 border-primary/50 transition-all duration-300 hover:border-l-primary"
                       initial={{ opacity: 0, y: 50 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.4 }}
+                      transition={{ duration: 0.6, delay: 0.3 }}
                       whileHover={{ x: 5 }}
                     >
                       <div className="absolute left-0 top-0 flex items-center justify-center w-8 h-8 -translate-x-1/2 rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground transition-transform duration-300 hover:scale-110 shadow-lg shadow-primary/20">
-                        <span className="text-xs font-bold">4</span>
+                        <span className="text-xs font-bold">6</span>
                       </div>
                       <div className="space-y-2 transition-all duration-300 hover:translate-x-2 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-transparent hover-light animated-border cursor-hover">
                         <div className="flex justify-between items-start">
@@ -984,10 +1082,7 @@ portfolio()`}
                           </div>
                         </div>
                         <p className="text-muted-foreground">
-                          Developed a Keylogger to securely monitor and record keystrokes using AI-driven solutions.
-                          Researched keylogging techniques, enhancing knowledge of AI applications in data security.
-                          Completed milestones ahead of schedule and delivered a final presentation showcasing system
-                          capabilities.
+                          Developed a Keylogger to securely monitor and record keystrokes using AI-driven solutions. Researched keylogging techniques, enhancing knowledge of AI applications in data security. Completed milestones ahead of schedule and delivered a final presentation showcasing system capabilities.
                         </p>
                         <div className="flex flex-wrap gap-2 pt-2">
                           <Badge className="bg-primary/10 hover:bg-primary/20 text-foreground border-none transition-colors">
@@ -1492,11 +1587,35 @@ portfolio()`}
                             className="flex items-center gap-3 transition-all duration-300 hover:translate-x-2 p-2 rounded-lg bg-primary/5 hover-light cursor-hover"
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.4, delay: 0.25 }}
+                            whileHover={{ x: 10, backgroundColor: "rgba(255, 59, 48, 0.15)" }}
+                          >
+                            <MapPin className="h-5 w-5 text-primary" />
+                            <span className="code-font">Tempe, AZ, USA</span>
+                          </motion.div>
+                          <motion.div
+                            className="flex items-center gap-3 transition-all duration-300 hover:translate-x-2 p-2 rounded-lg bg-primary/5 hover-light cursor-hover"
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.4, delay: 0.3 }}
                             whileHover={{ x: 10, backgroundColor: "rgba(255, 59, 48, 0.15)" }}
                           >
                             <Mail className="h-5 w-5 text-primary" />
-                            <span className="code-font">patrapriyanshu22@gmail.com</span>
+                            <a href="mailto:patrapriyanshu22@gmail.com" className="hover:text-primary transition-colors code-font">
+                              patrapriyanshu22@gmail.com
+                            </a>
+                          </motion.div>
+                          <motion.div
+                            className="flex items-center gap-3 transition-all duration-300 hover:translate-x-2 p-2 rounded-lg bg-primary/5 hover-light cursor-hover"
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.4, delay: 0.35 }}
+                            whileHover={{ x: 10, backgroundColor: "rgba(255, 59, 48, 0.15)" }}
+                          >
+                            <Phone className="h-5 w-5 text-primary" />
+                            <a href="tel:+16232008862" className="hover:text-primary transition-colors code-font">
+                              +1(623)-200-8862
+                            </a>
                           </motion.div>
                           <motion.div
                             className="flex items-center gap-3 transition-all duration-300 hover:translate-x-2 p-2 rounded-lg bg-primary/5 hover-light cursor-hover"
@@ -1598,7 +1717,7 @@ portfolio()`}
                   <div className="mt-16 pt-8 border-t border-primary/10">
                     <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
                       <p className="text-center text-sm leading-loose text-muted-foreground md:text-left code-font">
-                        © 2025 Priyanshu Patra. All rights reserved.
+                        © 2026 Priyanshu Patra. All rights reserved.
                       </p>
                       <div className="flex items-center gap-4">
                         <motion.div whileHover={{ scale: 1.2, rotate: 5 }} whileTap={{ scale: 0.9 }}>
